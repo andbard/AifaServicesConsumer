@@ -1,0 +1,328 @@
+{
+  "response": {
+    "numFound": 4,
+    "start": 0,
+    "docs": [
+      {
+        "id": "thp4so/node/296070",
+        "site": "http://10.0.126.45:10081/services/",
+        "hash": "thp4so",
+        "entity_id": 296070,
+        "entity_type": "node",
+        "bundle": "confezione_farmaco",
+        "bundle_name": "Confezione Farmaco",
+        "ss_language": "und",
+        "path": "node/296070",
+        "url": "http://10.0.126.45:10081/services/node/296070",
+        "label": "042692020",
+        "spell": [
+          "042692020",
+          " 1392 SANDOZ S.P.A. 042692 PARACALCITOLO SANDOZ 020 &quot;2 MICROGRAMMI/ML SOLUZIONE INIETTABILE&quot; 5 FIALE IN VETRO DA 2 ML A H05BX02 paracalcitolo M Sabato, Giugno 11, 2016- 02:00 Sabato, Giugno 11, 2016- 02:00 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_001392_042692_FI.pdf&amp;retry=0&amp;sys=m0b1l3 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_001392_042692_RCP.pdf&amp;retry=0&amp;sys=m0b1l3 042692020 042692020 "
+        ],
+        "content": " 1392 SANDOZ S.P.A. 042692 PARACALCITOLO SANDOZ 020 &quot;2 MICROGRAMMI/ML SOLUZIONE INIETTABILE&quot; 5 FIALE IN VETRO DA 2 ML A H05BX02 paracalcitolo M Sabato, Giugno 11, 2016- 02:00 Sabato, Giugno 11, 2016- 02:00 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_001392_042692_FI.pdf&amp;retry=0&amp;sys=m0b1l3 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_001392_042692_RCP.pdf&amp;retry=0&amp;sys=m0b1l3 042692020 042692020 ",
+        "teaser": " 1392 SANDOZ S.P.A. 042692 PARACALCITOLO SANDOZ 020 &quot;2 MICROGRAMMI/ML SOLUZIONE INIETTABILE&quot; 5 FIALE IN VETRO DA 2 ML A H05BX02 paracalcitolo M Sabato, Giugno 11, 2016- 02:00 Sabato, Giugno 11, 2016- 02:00 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName",
+        "ss_name": "0",
+        "ss_name_formatted": "Anonimo",
+        "tos_name_formatted": "Anonimo",
+        "is_uid": 0,
+        "bs_status": true,
+        "bs_sticky": false,
+        "bs_promote": true,
+        "is_tnid": 0,
+        "bs_translate": false,
+        "ds_created": "2014-07-08T11:53:50Z",
+        "ds_changed": "2016-06-12T04:00:01Z",
+        "ds_last_comment_or_change": "2016-06-12T04:00:01Z",
+        "sm_field_codice_ditta": [
+          "1392"
+        ],
+        "sm_field_descrizione_ditta": [
+          "SANDOZ S.P.A."
+        ],
+        "sm_field_codice_farmaco": [
+          "042692"
+        ],
+        "sm_field_descrizione_farmaco": [
+          "PARACALCITOLO SANDOZ"
+        ],
+        "sm_field_codice_confezione": [
+          "020"
+        ],
+        "sm_field_descrizione_confezione": [
+          "&quot;2 MICROGRAMMI/ML SOLUZIONE INIETTABILE&quot; 5 FIALE IN VETRO DA 2 ML"
+        ],
+        "sm_field_stato_farmaco": [
+          "A"
+        ],
+        "sm_field_codice_atc": [
+          "H05BX02"
+        ],
+        "sm_field_descrizione_atc": [
+          "paracalcitolo"
+        ],
+        "sm_field_tipo_procedura": [
+          "M"
+        ],
+        "dm_field_upload_date": [
+          "2016-06-11T00:00:00Z"
+        ],
+        "dm_field_last_update": [
+          "2016-06-11T00:00:00Z"
+        ],
+        "sm_field_link_fi": [
+          "https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_001392_042692_FI.pdf&amp;retry=0&amp;sys=m0b1l3"
+        ],
+        "sm_field_link_rcp": [
+          "https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_001392_042692_RCP.pdf&amp;retry=0&amp;sys=m0b1l3"
+        ],
+        "sm_field_chiave_confezione": [
+          "042692020"
+        ],
+        "sm_field_aic": [
+          "042692020"
+        ],
+        "timestamp": "2017-02-13T12:25:01.281Z"
+      },
+      {
+        "id": "thp4so/node/296071",
+        "site": "http://10.0.126.45:10081/services/",
+        "hash": "thp4so",
+        "entity_id": 296071,
+        "entity_type": "node",
+        "bundle": "confezione_farmaco",
+        "bundle_name": "Confezione Farmaco",
+        "ss_language": "und",
+        "path": "node/296071",
+        "url": "http://10.0.126.45:10081/services/node/296071",
+        "label": "042692018",
+        "spell": [
+          "042692018",
+          " 1392 SANDOZ S.P.A. 042692 PARACALCITOLO SANDOZ 018 &quot;2 MICROGRAMMI/ML SOLUZIONE INIETTABILE&quot; 5 FIALE IN VETRO DA 1 ML A H05BX02 paracalcitolo M Sabato, Giugno 11, 2016- 02:00 Sabato, Giugno 11, 2016- 02:00 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_001392_042692_FI.pdf&amp;retry=0&amp;sys=m0b1l3 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_001392_042692_RCP.pdf&amp;retry=0&amp;sys=m0b1l3 042692018 042692018 "
+        ],
+        "content": " 1392 SANDOZ S.P.A. 042692 PARACALCITOLO SANDOZ 018 &quot;2 MICROGRAMMI/ML SOLUZIONE INIETTABILE&quot; 5 FIALE IN VETRO DA 1 ML A H05BX02 paracalcitolo M Sabato, Giugno 11, 2016- 02:00 Sabato, Giugno 11, 2016- 02:00 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_001392_042692_FI.pdf&amp;retry=0&amp;sys=m0b1l3 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_001392_042692_RCP.pdf&amp;retry=0&amp;sys=m0b1l3 042692018 042692018 ",
+        "teaser": " 1392 SANDOZ S.P.A. 042692 PARACALCITOLO SANDOZ 018 &quot;2 MICROGRAMMI/ML SOLUZIONE INIETTABILE&quot; 5 FIALE IN VETRO DA 1 ML A H05BX02 paracalcitolo M Sabato, Giugno 11, 2016- 02:00 Sabato, Giugno 11, 2016- 02:00 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName",
+        "ss_name": "0",
+        "ss_name_formatted": "Anonimo",
+        "tos_name_formatted": "Anonimo",
+        "is_uid": 0,
+        "bs_status": true,
+        "bs_sticky": false,
+        "bs_promote": true,
+        "is_tnid": 0,
+        "bs_translate": false,
+        "ds_created": "2014-07-08T11:53:50Z",
+        "ds_changed": "2016-06-12T04:00:01Z",
+        "ds_last_comment_or_change": "2016-06-12T04:00:01Z",
+        "sm_field_codice_ditta": [
+          "1392"
+        ],
+        "sm_field_descrizione_ditta": [
+          "SANDOZ S.P.A."
+        ],
+        "sm_field_codice_farmaco": [
+          "042692"
+        ],
+        "sm_field_descrizione_farmaco": [
+          "PARACALCITOLO SANDOZ"
+        ],
+        "sm_field_codice_confezione": [
+          "018"
+        ],
+        "sm_field_descrizione_confezione": [
+          "&quot;2 MICROGRAMMI/ML SOLUZIONE INIETTABILE&quot; 5 FIALE IN VETRO DA 1 ML"
+        ],
+        "sm_field_stato_farmaco": [
+          "A"
+        ],
+        "sm_field_codice_atc": [
+          "H05BX02"
+        ],
+        "sm_field_descrizione_atc": [
+          "paracalcitolo"
+        ],
+        "sm_field_tipo_procedura": [
+          "M"
+        ],
+        "dm_field_upload_date": [
+          "2016-06-11T00:00:00Z"
+        ],
+        "dm_field_last_update": [
+          "2016-06-11T00:00:00Z"
+        ],
+        "sm_field_link_fi": [
+          "https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_001392_042692_FI.pdf&amp;retry=0&amp;sys=m0b1l3"
+        ],
+        "sm_field_link_rcp": [
+          "https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_001392_042692_RCP.pdf&amp;retry=0&amp;sys=m0b1l3"
+        ],
+        "sm_field_chiave_confezione": [
+          "042692018"
+        ],
+        "sm_field_aic": [
+          "042692018"
+        ],
+        "timestamp": "2017-02-13T12:25:01.281Z"
+      },
+      {
+        "id": "thp4so/node/296072",
+        "site": "http://10.0.126.45:10081/services/",
+        "hash": "thp4so",
+        "entity_id": 296072,
+        "entity_type": "node",
+        "bundle": "confezione_farmaco",
+        "bundle_name": "Confezione Farmaco",
+        "ss_language": "und",
+        "path": "node/296072",
+        "url": "http://10.0.126.45:10081/services/node/296072",
+        "label": "042692032",
+        "spell": [
+          "042692032",
+          " 1392 SANDOZ S.P.A. 042692 PARACALCITOLO SANDOZ 032 &quot;5 MICROGRAMMI/ML SOLUZIONE INIETTABILE&quot; 5 FIALE IN VETRO DA 1 ML A H05BX02 paracalcitolo M Sabato, Giugno 11, 2016- 02:00 Sabato, Giugno 11, 2016- 02:00 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_001392_042692_FI.pdf&amp;retry=0&amp;sys=m0b1l3 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_001392_042692_RCP.pdf&amp;retry=0&amp;sys=m0b1l3 042692032 042692032 "
+        ],
+        "content": " 1392 SANDOZ S.P.A. 042692 PARACALCITOLO SANDOZ 032 &quot;5 MICROGRAMMI/ML SOLUZIONE INIETTABILE&quot; 5 FIALE IN VETRO DA 1 ML A H05BX02 paracalcitolo M Sabato, Giugno 11, 2016- 02:00 Sabato, Giugno 11, 2016- 02:00 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_001392_042692_FI.pdf&amp;retry=0&amp;sys=m0b1l3 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_001392_042692_RCP.pdf&amp;retry=0&amp;sys=m0b1l3 042692032 042692032 ",
+        "teaser": " 1392 SANDOZ S.P.A. 042692 PARACALCITOLO SANDOZ 032 &quot;5 MICROGRAMMI/ML SOLUZIONE INIETTABILE&quot; 5 FIALE IN VETRO DA 1 ML A H05BX02 paracalcitolo M Sabato, Giugno 11, 2016- 02:00 Sabato, Giugno 11, 2016- 02:00 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName",
+        "ss_name": "0",
+        "ss_name_formatted": "Anonimo",
+        "tos_name_formatted": "Anonimo",
+        "is_uid": 0,
+        "bs_status": true,
+        "bs_sticky": false,
+        "bs_promote": true,
+        "is_tnid": 0,
+        "bs_translate": false,
+        "ds_created": "2014-07-08T11:53:50Z",
+        "ds_changed": "2016-06-12T04:00:01Z",
+        "ds_last_comment_or_change": "2016-06-12T04:00:01Z",
+        "sm_field_codice_ditta": [
+          "1392"
+        ],
+        "sm_field_descrizione_ditta": [
+          "SANDOZ S.P.A."
+        ],
+        "sm_field_codice_farmaco": [
+          "042692"
+        ],
+        "sm_field_descrizione_farmaco": [
+          "PARACALCITOLO SANDOZ"
+        ],
+        "sm_field_codice_confezione": [
+          "032"
+        ],
+        "sm_field_descrizione_confezione": [
+          "&quot;5 MICROGRAMMI/ML SOLUZIONE INIETTABILE&quot; 5 FIALE IN VETRO DA 1 ML"
+        ],
+        "sm_field_stato_farmaco": [
+          "A"
+        ],
+        "sm_field_codice_atc": [
+          "H05BX02"
+        ],
+        "sm_field_descrizione_atc": [
+          "paracalcitolo"
+        ],
+        "sm_field_tipo_procedura": [
+          "M"
+        ],
+        "dm_field_upload_date": [
+          "2016-06-11T00:00:00Z"
+        ],
+        "dm_field_last_update": [
+          "2016-06-11T00:00:00Z"
+        ],
+        "sm_field_link_fi": [
+          "https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_001392_042692_FI.pdf&amp;retry=0&amp;sys=m0b1l3"
+        ],
+        "sm_field_link_rcp": [
+          "https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_001392_042692_RCP.pdf&amp;retry=0&amp;sys=m0b1l3"
+        ],
+        "sm_field_chiave_confezione": [
+          "042692032"
+        ],
+        "sm_field_aic": [
+          "042692032"
+        ],
+        "timestamp": "2017-02-13T12:25:01.281Z"
+      },
+      {
+        "id": "thp4so/node/296073",
+        "site": "http://10.0.126.45:10081/services/",
+        "hash": "thp4so",
+        "entity_id": 296073,
+        "entity_type": "node",
+        "bundle": "confezione_farmaco",
+        "bundle_name": "Confezione Farmaco",
+        "ss_language": "und",
+        "path": "node/296073",
+        "url": "http://10.0.126.45:10081/services/node/296073",
+        "label": "042692044",
+        "spell": [
+          "042692044",
+          " 1392 SANDOZ S.P.A. 042692 PARACALCITOLO SANDOZ 044 &quot;5 MICROGRAMMI/ML SOLUZIONE INIETTABILE&quot; 5 FIALE IN VETRO DA 2 ML A H05BX02 paracalcitolo M Sabato, Giugno 11, 2016- 02:00 Sabato, Giugno 11, 2016- 02:00 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_001392_042692_FI.pdf&amp;retry=0&amp;sys=m0b1l3 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_001392_042692_RCP.pdf&amp;retry=0&amp;sys=m0b1l3 042692044 042692044 "
+        ],
+        "content": " 1392 SANDOZ S.P.A. 042692 PARACALCITOLO SANDOZ 044 &quot;5 MICROGRAMMI/ML SOLUZIONE INIETTABILE&quot; 5 FIALE IN VETRO DA 2 ML A H05BX02 paracalcitolo M Sabato, Giugno 11, 2016- 02:00 Sabato, Giugno 11, 2016- 02:00 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_001392_042692_FI.pdf&amp;retry=0&amp;sys=m0b1l3 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_001392_042692_RCP.pdf&amp;retry=0&amp;sys=m0b1l3 042692044 042692044 ",
+        "teaser": " 1392 SANDOZ S.P.A. 042692 PARACALCITOLO SANDOZ 044 &quot;5 MICROGRAMMI/ML SOLUZIONE INIETTABILE&quot; 5 FIALE IN VETRO DA 2 ML A H05BX02 paracalcitolo M Sabato, Giugno 11, 2016- 02:00 Sabato, Giugno 11, 2016- 02:00 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName",
+        "ss_name": "0",
+        "ss_name_formatted": "Anonimo",
+        "tos_name_formatted": "Anonimo",
+        "is_uid": 0,
+        "bs_status": true,
+        "bs_sticky": false,
+        "bs_promote": true,
+        "is_tnid": 0,
+        "bs_translate": false,
+        "ds_created": "2014-07-08T11:53:50Z",
+        "ds_changed": "2016-06-12T04:00:01Z",
+        "ds_last_comment_or_change": "2016-06-12T04:00:01Z",
+        "sm_field_codice_ditta": [
+          "1392"
+        ],
+        "sm_field_descrizione_ditta": [
+          "SANDOZ S.P.A."
+        ],
+        "sm_field_codice_farmaco": [
+          "042692"
+        ],
+        "sm_field_descrizione_farmaco": [
+          "PARACALCITOLO SANDOZ"
+        ],
+        "sm_field_codice_confezione": [
+          "044"
+        ],
+        "sm_field_descrizione_confezione": [
+          "&quot;5 MICROGRAMMI/ML SOLUZIONE INIETTABILE&quot; 5 FIALE IN VETRO DA 2 ML"
+        ],
+        "sm_field_stato_farmaco": [
+          "A"
+        ],
+        "sm_field_codice_atc": [
+          "H05BX02"
+        ],
+        "sm_field_descrizione_atc": [
+          "paracalcitolo"
+        ],
+        "sm_field_tipo_procedura": [
+          "M"
+        ],
+        "dm_field_upload_date": [
+          "2016-06-11T00:00:00Z"
+        ],
+        "dm_field_last_update": [
+          "2016-06-11T00:00:00Z"
+        ],
+        "sm_field_link_fi": [
+          "https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_001392_042692_FI.pdf&amp;retry=0&amp;sys=m0b1l3"
+        ],
+        "sm_field_link_rcp": [
+          "https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_001392_042692_RCP.pdf&amp;retry=0&amp;sys=m0b1l3"
+        ],
+        "sm_field_chiave_confezione": [
+          "042692044"
+        ],
+        "sm_field_aic": [
+          "042692044"
+        ],
+        "timestamp": "2017-02-13T12:25:01.281Z"
+      }
+    ]
+  }
+}

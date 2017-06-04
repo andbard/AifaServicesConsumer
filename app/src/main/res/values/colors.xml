@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#009688</color>
+    <color name="colorPrimaryDark">#00796B</color>
+    <color name="colorPrimaryLight">#B2DFDB</color>
+    <color name="colorAccent"> #FFC107</color>
+
+    <color name="colorTextIcons">#FFFFFF</color>
+
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorSecondaryText">#757575</color>
+    <color name="colorDividerDark">#BDBDBD</color>
+
+    <!--<color name="colorBackgroundDark">#1565c0</color>-->
+    <!--<color name="colorBackgroundLight">#90caf9</color>-->
+
+    <!--<color name="colorPrimaryDarkText">#de000000</color>-->
+    <!--<color name="colorSecondaryDarkText">#8a000000</color>-->
+    <!--<color name="colorDisabledDarkText">#61000000</color>-->
+    <!--<color name="colorHintDarkText">@color/colorDisabledDarkText</color>-->
+    <!--<color name="colorDividerDark">#1e000000</color>-->
+
+    <!--<color name="colorPrimaryLightText">#ffffff</color>-->
+    <!--<color name="colorSecondaryLightText">#b3ffffff</color>-->
+    <!--<color name="colorDisabledLightText">#80ffffff</color>-->
+    <!--<color name="colorHintLightText">@color/colorDisabledLightText</color>-->
+    <!--<color name="colorDividerLight">#1effffff</color>-->
+</resources>

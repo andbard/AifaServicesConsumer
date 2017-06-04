@@ -1,0 +1,488 @@
+{
+  "response": {
+    "numFound": 6,
+    "start": 0,
+    "docs": [
+      {
+        "id": "thp4so/node/206929",
+        "site": "http://10.0.126.45:10081/services/",
+        "hash": "thp4so",
+        "entity_id": 206929,
+        "entity_type": "node",
+        "bundle": "confezione_farmaco",
+        "bundle_name": "Confezione Farmaco",
+        "ss_language": "und",
+        "path": "node/206929",
+        "url": "http://10.0.126.45:10081/services/node/206929",
+        "label": "029007034",
+        "spell": [
+          "029007034",
+          " 0608 LABORATORI GUIDOTTI S.P.A. 029007 NIMESULENE 034 10 SUPPOSTE 200 MG R M01AX Altri farmaci antinfiammatori e antireumatici non steroidei N Sabato, Giugno 11, 2016- 02:00 Sabato, Giugno 11, 2016- 02:00 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_FI.pdf&amp;retry=0&amp;sys=m0b1l3 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_RCP.pdf&amp;retry=0&amp;sys=m0b1l3 029007034 029007034 "
+        ],
+        "content": " 0608 LABORATORI GUIDOTTI S.P.A. 029007 NIMESULENE 034 10 SUPPOSTE 200 MG R M01AX Altri farmaci antinfiammatori e antireumatici non steroidei N Sabato, Giugno 11, 2016- 02:00 Sabato, Giugno 11, 2016- 02:00 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_FI.pdf&amp;retry=0&amp;sys=m0b1l3 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_RCP.pdf&amp;retry=0&amp;sys=m0b1l3 029007034 029007034 ",
+        "teaser": " 0608 LABORATORI GUIDOTTI S.P.A. 029007 NIMESULENE 034 10 SUPPOSTE 200 MG R M01AX Altri farmaci antinfiammatori e antireumatici non steroidei N Sabato, Giugno 11, 2016- 02:00 Sabato, Giugno 11, 2016- 02:00 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer",
+        "ss_name": "0",
+        "ss_name_formatted": "Anonimo",
+        "tos_name_formatted": "Anonimo",
+        "is_uid": 0,
+        "bs_status": true,
+        "bs_sticky": false,
+        "bs_promote": true,
+        "is_tnid": 0,
+        "bs_translate": false,
+        "ds_created": "2014-07-08T11:53:50Z",
+        "ds_changed": "2016-06-12T04:00:01Z",
+        "ds_last_comment_or_change": "2016-06-12T04:00:01Z",
+        "sm_field_codice_ditta": [
+          "0608"
+        ],
+        "sm_field_descrizione_ditta": [
+          "LABORATORI GUIDOTTI S.P.A."
+        ],
+        "sm_field_codice_farmaco": [
+          "029007"
+        ],
+        "sm_field_descrizione_farmaco": [
+          "NIMESULENE"
+        ],
+        "sm_field_codice_confezione": [
+          "034"
+        ],
+        "sm_field_descrizione_confezione": [
+          "10 SUPPOSTE 200 MG"
+        ],
+        "sm_field_stato_farmaco": [
+          "R"
+        ],
+        "sm_field_codice_atc": [
+          "M01AX"
+        ],
+        "sm_field_descrizione_atc": [
+          "Altri farmaci antinfiammatori e antireumatici non steroidei"
+        ],
+        "sm_field_tipo_procedura": [
+          "N"
+        ],
+        "dm_field_upload_date": [
+          "2016-06-11T00:00:00Z"
+        ],
+        "dm_field_last_update": [
+          "2016-06-11T00:00:00Z"
+        ],
+        "sm_field_link_fi": [
+          "https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_FI.pdf&amp;retry=0&amp;sys=m0b1l3"
+        ],
+        "sm_field_link_rcp": [
+          "https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_RCP.pdf&amp;retry=0&amp;sys=m0b1l3"
+        ],
+        "sm_field_chiave_confezione": [
+          "029007034"
+        ],
+        "sm_field_aic": [
+          "029007034"
+        ],
+        "timestamp": "2017-02-13T11:27:06.479Z"
+      },
+      {
+        "id": "thp4so/node/206930",
+        "site": "http://10.0.126.45:10081/services/",
+        "hash": "thp4so",
+        "entity_id": 206930,
+        "entity_type": "node",
+        "bundle": "confezione_farmaco",
+        "bundle_name": "Confezione Farmaco",
+        "ss_language": "und",
+        "path": "node/206930",
+        "url": "http://10.0.126.45:10081/services/node/206930",
+        "label": "029007022",
+        "spell": [
+          "029007022",
+          " 0608 LABORATORI GUIDOTTI S.P.A. 029007 NIMESULENE 022 30 BUSTINE 100 MG R M01AX17 Nimesulide N Sabato, Giugno 11, 2016- 02:00 Sabato, Giugno 11, 2016- 02:00 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_FI.pdf&amp;retry=0&amp;sys=m0b1l3 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_RCP.pdf&amp;retry=0&amp;sys=m0b1l3 029007022 029007022 "
+        ],
+        "content": " 0608 LABORATORI GUIDOTTI S.P.A. 029007 NIMESULENE 022 30 BUSTINE 100 MG R M01AX17 Nimesulide N Sabato, Giugno 11, 2016- 02:00 Sabato, Giugno 11, 2016- 02:00 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_FI.pdf&amp;retry=0&amp;sys=m0b1l3 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_RCP.pdf&amp;retry=0&amp;sys=m0b1l3 029007022 029007022 ",
+        "teaser": " 0608 LABORATORI GUIDOTTI S.P.A. 029007 NIMESULENE 022 30 BUSTINE 100 MG R M01AX17 Nimesulide N Sabato, Giugno 11, 2016- 02:00 Sabato, Giugno 11, 2016- 02:00 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_FI.pdf&amp;retry=0&amp;sys=m0b1l3 https",
+        "ss_name": "0",
+        "ss_name_formatted": "Anonimo",
+        "tos_name_formatted": "Anonimo",
+        "is_uid": 0,
+        "bs_status": true,
+        "bs_sticky": false,
+        "bs_promote": true,
+        "is_tnid": 0,
+        "bs_translate": false,
+        "ds_created": "2014-07-08T11:53:50Z",
+        "ds_changed": "2016-06-12T04:00:01Z",
+        "ds_last_comment_or_change": "2016-06-12T04:00:01Z",
+        "sm_field_codice_ditta": [
+          "0608"
+        ],
+        "sm_field_descrizione_ditta": [
+          "LABORATORI GUIDOTTI S.P.A."
+        ],
+        "sm_field_codice_farmaco": [
+          "029007"
+        ],
+        "sm_field_descrizione_farmaco": [
+          "NIMESULENE"
+        ],
+        "sm_field_codice_confezione": [
+          "022"
+        ],
+        "sm_field_descrizione_confezione": [
+          "30 BUSTINE 100 MG"
+        ],
+        "sm_field_stato_farmaco": [
+          "R"
+        ],
+        "sm_field_codice_atc": [
+          "M01AX17"
+        ],
+        "sm_field_descrizione_atc": [
+          "Nimesulide"
+        ],
+        "sm_field_tipo_procedura": [
+          "N"
+        ],
+        "dm_field_upload_date": [
+          "2016-06-11T00:00:00Z"
+        ],
+        "dm_field_last_update": [
+          "2016-06-11T00:00:00Z"
+        ],
+        "sm_field_link_fi": [
+          "https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_FI.pdf&amp;retry=0&amp;sys=m0b1l3"
+        ],
+        "sm_field_link_rcp": [
+          "https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_RCP.pdf&amp;retry=0&amp;sys=m0b1l3"
+        ],
+        "sm_field_chiave_confezione": [
+          "029007022"
+        ],
+        "sm_field_aic": [
+          "029007022"
+        ],
+        "timestamp": "2017-02-13T11:27:06.479Z"
+      },
+      {
+        "id": "thp4so/node/206931",
+        "site": "http://10.0.126.45:10081/services/",
+        "hash": "thp4so",
+        "entity_id": 206931,
+        "entity_type": "node",
+        "bundle": "confezione_farmaco",
+        "bundle_name": "Confezione Farmaco",
+        "ss_language": "und",
+        "path": "node/206931",
+        "url": "http://10.0.126.45:10081/services/node/206931",
+        "label": "029007046",
+        "spell": [
+          "029007046",
+          " 0608 LABORATORI GUIDOTTI S.P.A. 029007 NIMESULENE 046 &quot;100 MG COMPRESSE&quot; BLISTER 30 COMPRESSE A M01AX17 Nimesulide N Sabato, Giugno 11, 2016- 02:00 Sabato, Giugno 11, 2016- 02:00 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_FI.pdf&amp;retry=0&amp;sys=m0b1l3 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_RCP.pdf&amp;retry=0&amp;sys=m0b1l3 029007046 029007046 "
+        ],
+        "content": " 0608 LABORATORI GUIDOTTI S.P.A. 029007 NIMESULENE 046 &quot;100 MG COMPRESSE&quot; BLISTER 30 COMPRESSE A M01AX17 Nimesulide N Sabato, Giugno 11, 2016- 02:00 Sabato, Giugno 11, 2016- 02:00 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_FI.pdf&amp;retry=0&amp;sys=m0b1l3 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_RCP.pdf&amp;retry=0&amp;sys=m0b1l3 029007046 029007046 ",
+        "teaser": " 0608 LABORATORI GUIDOTTI S.P.A. 029007 NIMESULENE 046 &quot;100 MG COMPRESSE&quot; BLISTER 30 COMPRESSE A M01AX17 Nimesulide N Sabato, Giugno 11, 2016- 02:00 Sabato, Giugno 11, 2016- 02:00 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_FI.pdf",
+        "ss_name": "0",
+        "ss_name_formatted": "Anonimo",
+        "tos_name_formatted": "Anonimo",
+        "is_uid": 0,
+        "bs_status": true,
+        "bs_sticky": false,
+        "bs_promote": true,
+        "is_tnid": 0,
+        "bs_translate": false,
+        "ds_created": "2014-07-08T11:53:50Z",
+        "ds_changed": "2016-06-12T04:00:01Z",
+        "ds_last_comment_or_change": "2016-06-12T04:00:01Z",
+        "sm_field_codice_ditta": [
+          "0608"
+        ],
+        "sm_field_descrizione_ditta": [
+          "LABORATORI GUIDOTTI S.P.A."
+        ],
+        "sm_field_codice_farmaco": [
+          "029007"
+        ],
+        "sm_field_descrizione_farmaco": [
+          "NIMESULENE"
+        ],
+        "sm_field_codice_confezione": [
+          "046"
+        ],
+        "sm_field_descrizione_confezione": [
+          "&quot;100 MG COMPRESSE&quot; BLISTER 30 COMPRESSE"
+        ],
+        "sm_field_stato_farmaco": [
+          "A"
+        ],
+        "sm_field_codice_atc": [
+          "M01AX17"
+        ],
+        "sm_field_descrizione_atc": [
+          "Nimesulide"
+        ],
+        "sm_field_tipo_procedura": [
+          "N"
+        ],
+        "dm_field_upload_date": [
+          "2016-06-11T00:00:00Z"
+        ],
+        "dm_field_last_update": [
+          "2016-06-11T00:00:00Z"
+        ],
+        "sm_field_link_fi": [
+          "https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_FI.pdf&amp;retry=0&amp;sys=m0b1l3"
+        ],
+        "sm_field_link_rcp": [
+          "https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_RCP.pdf&amp;retry=0&amp;sys=m0b1l3"
+        ],
+        "sm_field_chiave_confezione": [
+          "029007046"
+        ],
+        "sm_field_aic": [
+          "029007046"
+        ],
+        "timestamp": "2017-02-13T11:27:06.479Z"
+      },
+      {
+        "id": "thp4so/node/206932",
+        "site": "http://10.0.126.45:10081/services/",
+        "hash": "thp4so",
+        "entity_id": 206932,
+        "entity_type": "node",
+        "bundle": "confezione_farmaco",
+        "bundle_name": "Confezione Farmaco",
+        "ss_language": "und",
+        "path": "node/206932",
+        "url": "http://10.0.126.45:10081/services/node/206932",
+        "label": "029007061",
+        "spell": [
+          "029007061",
+          " 0608 LABORATORI GUIDOTTI S.P.A. 029007 NIMESULENE 061 &quot;200 MG SUPPOSTE&quot; 10 SUPPOSTE A M01AX17 Nimesulide N Sabato, Giugno 11, 2016- 02:00 Sabato, Giugno 11, 2016- 02:00 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_FI.pdf&amp;retry=0&amp;sys=m0b1l3 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_RCP.pdf&amp;retry=0&amp;sys=m0b1l3 029007061 029007061 "
+        ],
+        "content": " 0608 LABORATORI GUIDOTTI S.P.A. 029007 NIMESULENE 061 &quot;200 MG SUPPOSTE&quot; 10 SUPPOSTE A M01AX17 Nimesulide N Sabato, Giugno 11, 2016- 02:00 Sabato, Giugno 11, 2016- 02:00 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_FI.pdf&amp;retry=0&amp;sys=m0b1l3 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_RCP.pdf&amp;retry=0&amp;sys=m0b1l3 029007061 029007061 ",
+        "teaser": " 0608 LABORATORI GUIDOTTI S.P.A. 029007 NIMESULENE 061 &quot;200 MG SUPPOSTE&quot; 10 SUPPOSTE A M01AX17 Nimesulide N Sabato, Giugno 11, 2016- 02:00 Sabato, Giugno 11, 2016- 02:00 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_FI.pdf&amp;retry",
+        "ss_name": "0",
+        "ss_name_formatted": "Anonimo",
+        "tos_name_formatted": "Anonimo",
+        "is_uid": 0,
+        "bs_status": true,
+        "bs_sticky": false,
+        "bs_promote": true,
+        "is_tnid": 0,
+        "bs_translate": false,
+        "ds_created": "2014-07-08T11:53:50Z",
+        "ds_changed": "2016-06-12T04:00:01Z",
+        "ds_last_comment_or_change": "2016-06-12T04:00:01Z",
+        "sm_field_codice_ditta": [
+          "0608"
+        ],
+        "sm_field_descrizione_ditta": [
+          "LABORATORI GUIDOTTI S.P.A."
+        ],
+        "sm_field_codice_farmaco": [
+          "029007"
+        ],
+        "sm_field_descrizione_farmaco": [
+          "NIMESULENE"
+        ],
+        "sm_field_codice_confezione": [
+          "061"
+        ],
+        "sm_field_descrizione_confezione": [
+          "&quot;200 MG SUPPOSTE&quot; 10 SUPPOSTE"
+        ],
+        "sm_field_stato_farmaco": [
+          "A"
+        ],
+        "sm_field_codice_atc": [
+          "M01AX17"
+        ],
+        "sm_field_descrizione_atc": [
+          "Nimesulide"
+        ],
+        "sm_field_tipo_procedura": [
+          "N"
+        ],
+        "dm_field_upload_date": [
+          "2016-06-11T00:00:00Z"
+        ],
+        "dm_field_last_update": [
+          "2016-06-11T00:00:00Z"
+        ],
+        "sm_field_link_fi": [
+          "https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_FI.pdf&amp;retry=0&amp;sys=m0b1l3"
+        ],
+        "sm_field_link_rcp": [
+          "https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_RCP.pdf&amp;retry=0&amp;sys=m0b1l3"
+        ],
+        "sm_field_chiave_confezione": [
+          "029007061"
+        ],
+        "sm_field_aic": [
+          "029007061"
+        ],
+        "timestamp": "2017-02-13T11:27:06.479Z"
+      },
+      {
+        "id": "thp4so/node/206933",
+        "site": "http://10.0.126.45:10081/services/",
+        "hash": "thp4so",
+        "entity_id": 206933,
+        "entity_type": "node",
+        "bundle": "confezione_farmaco",
+        "bundle_name": "Confezione Farmaco",
+        "ss_language": "und",
+        "path": "node/206933",
+        "url": "http://10.0.126.45:10081/services/node/206933",
+        "label": "029007059",
+        "spell": [
+          "029007059",
+          " 0608 LABORATORI GUIDOTTI S.P.A. 029007 NIMESULENE 059 &quot;100 MG GRANULATO PER SOSPENSIONE ORALE&quot; 30 BUSTINE A M01AX17 Nimesulide N Sabato, Giugno 11, 2016- 02:00 Sabato, Giugno 11, 2016- 02:00 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_FI.pdf&amp;retry=0&amp;sys=m0b1l3 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_RCP.pdf&amp;retry=0&amp;sys=m0b1l3 029007059 029007059 "
+        ],
+        "content": " 0608 LABORATORI GUIDOTTI S.P.A. 029007 NIMESULENE 059 &quot;100 MG GRANULATO PER SOSPENSIONE ORALE&quot; 30 BUSTINE A M01AX17 Nimesulide N Sabato, Giugno 11, 2016- 02:00 Sabato, Giugno 11, 2016- 02:00 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_FI.pdf&amp;retry=0&amp;sys=m0b1l3 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_RCP.pdf&amp;retry=0&amp;sys=m0b1l3 029007059 029007059 ",
+        "teaser": " 0608 LABORATORI GUIDOTTI S.P.A. 029007 NIMESULENE 059 &quot;100 MG GRANULATO PER SOSPENSIONE ORALE&quot; 30 BUSTINE A M01AX17 Nimesulide N Sabato, Giugno 11, 2016- 02:00 Sabato, Giugno 11, 2016- 02:00 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608",
+        "ss_name": "0",
+        "ss_name_formatted": "Anonimo",
+        "tos_name_formatted": "Anonimo",
+        "is_uid": 0,
+        "bs_status": true,
+        "bs_sticky": false,
+        "bs_promote": true,
+        "is_tnid": 0,
+        "bs_translate": false,
+        "ds_created": "2014-07-08T11:53:50Z",
+        "ds_changed": "2016-06-12T04:00:01Z",
+        "ds_last_comment_or_change": "2016-06-12T04:00:01Z",
+        "sm_field_codice_ditta": [
+          "0608"
+        ],
+        "sm_field_descrizione_ditta": [
+          "LABORATORI GUIDOTTI S.P.A."
+        ],
+        "sm_field_codice_farmaco": [
+          "029007"
+        ],
+        "sm_field_descrizione_farmaco": [
+          "NIMESULENE"
+        ],
+        "sm_field_codice_confezione": [
+          "059"
+        ],
+        "sm_field_descrizione_confezione": [
+          "&quot;100 MG GRANULATO PER SOSPENSIONE ORALE&quot; 30 BUSTINE"
+        ],
+        "sm_field_stato_farmaco": [
+          "A"
+        ],
+        "sm_field_codice_atc": [
+          "M01AX17"
+        ],
+        "sm_field_descrizione_atc": [
+          "Nimesulide"
+        ],
+        "sm_field_tipo_procedura": [
+          "N"
+        ],
+        "dm_field_upload_date": [
+          "2016-06-11T00:00:00Z"
+        ],
+        "dm_field_last_update": [
+          "2016-06-11T00:00:00Z"
+        ],
+        "sm_field_link_fi": [
+          "https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_FI.pdf&amp;retry=0&amp;sys=m0b1l3"
+        ],
+        "sm_field_link_rcp": [
+          "https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_RCP.pdf&amp;retry=0&amp;sys=m0b1l3"
+        ],
+        "sm_field_chiave_confezione": [
+          "029007059"
+        ],
+        "sm_field_aic": [
+          "029007059"
+        ],
+        "timestamp": "2017-02-13T11:27:06.479Z"
+      },
+      {
+        "id": "thp4so/node/206934",
+        "site": "http://10.0.126.45:10081/services/",
+        "hash": "thp4so",
+        "entity_id": 206934,
+        "entity_type": "node",
+        "bundle": "confezione_farmaco",
+        "bundle_name": "Confezione Farmaco",
+        "ss_language": "und",
+        "path": "node/206934",
+        "url": "http://10.0.126.45:10081/services/node/206934",
+        "label": "029007010",
+        "spell": [
+          "029007010",
+          " 0608 LABORATORI GUIDOTTI S.P.A. 029007 NIMESULENE 010 30 C0MPRESSE 100 MG R M01AX17 Nimesulide N Sabato, Giugno 11, 2016- 02:00 Sabato, Giugno 11, 2016- 02:00 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_FI.pdf&amp;retry=0&amp;sys=m0b1l3 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_RCP.pdf&amp;retry=0&amp;sys=m0b1l3 029007010 029007010 "
+        ],
+        "content": " 0608 LABORATORI GUIDOTTI S.P.A. 029007 NIMESULENE 010 30 C0MPRESSE 100 MG R M01AX17 Nimesulide N Sabato, Giugno 11, 2016- 02:00 Sabato, Giugno 11, 2016- 02:00 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_FI.pdf&amp;retry=0&amp;sys=m0b1l3 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_RCP.pdf&amp;retry=0&amp;sys=m0b1l3 029007010 029007010 ",
+        "teaser": " 0608 LABORATORI GUIDOTTI S.P.A. 029007 NIMESULENE 010 30 C0MPRESSE 100 MG R M01AX17 Nimesulide N Sabato, Giugno 11, 2016- 02:00 Sabato, Giugno 11, 2016- 02:00 https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_FI.pdf&amp;retry=0&amp;sys=m0b1l3",
+        "ss_name": "0",
+        "ss_name_formatted": "Anonimo",
+        "tos_name_formatted": "Anonimo",
+        "is_uid": 0,
+        "bs_status": true,
+        "bs_sticky": false,
+        "bs_promote": true,
+        "is_tnid": 0,
+        "bs_translate": false,
+        "ds_created": "2014-07-08T11:53:50Z",
+        "ds_changed": "2016-06-12T04:00:01Z",
+        "ds_last_comment_or_change": "2016-06-12T04:00:01Z",
+        "sm_field_codice_ditta": [
+          "0608"
+        ],
+        "sm_field_descrizione_ditta": [
+          "LABORATORI GUIDOTTI S.P.A."
+        ],
+        "sm_field_codice_farmaco": [
+          "029007"
+        ],
+        "sm_field_descrizione_farmaco": [
+          "NIMESULENE"
+        ],
+        "sm_field_codice_confezione": [
+          "010"
+        ],
+        "sm_field_descrizione_confezione": [
+          "30 C0MPRESSE 100 MG"
+        ],
+        "sm_field_stato_farmaco": [
+          "R"
+        ],
+        "sm_field_codice_atc": [
+          "M01AX17"
+        ],
+        "sm_field_descrizione_atc": [
+          "Nimesulide"
+        ],
+        "sm_field_tipo_procedura": [
+          "N"
+        ],
+        "dm_field_upload_date": [
+          "2016-06-11T00:00:00Z"
+        ],
+        "dm_field_last_update": [
+          "2016-06-11T00:00:00Z"
+        ],
+        "sm_field_link_fi": [
+          "https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_FI.pdf&amp;retry=0&amp;sys=m0b1l3"
+        ],
+        "sm_field_link_rcp": [
+          "https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_000608_029007_RCP.pdf&amp;retry=0&amp;sys=m0b1l3"
+        ],
+        "sm_field_chiave_confezione": [
+          "029007010"
+        ],
+        "sm_field_aic": [
+          "029007010"
+        ],
+        "timestamp": "2017-02-13T11:27:06.479Z"
+      }
+    ]
+  }
+}

@@ -1,0 +1,130 @@
+ext {
+
+    support = [
+            group: 'com.android.support',
+            names: [
+                    design: 'design',
+                    appCompat: 'appcompat-v7',
+                    support: 'support-v4',
+                    recyclerView: 'recyclerview-v7',
+                    cardView: 'cardview-v7',
+                    gridLayout: 'gridlayout-v7',
+                    annotations: 'support-annotations'
+            ],
+            version: '25.3.1'
+    ]
+
+    timber = [
+            group: 'com.jakewharton.timber',
+            name: 'timber',
+            version: '4.5.1'
+    ]
+
+    butterKnife = [
+            group: 'com.jakewharton',
+            names: [
+                    butterKnife: 'butterknife',
+                    butterKnifeCompiler: 'butterknife-compiler'
+            ],
+            version: '8.6.0'
+    ]
+
+    dagger = [
+            group: 'com.google.dagger',
+            names: [
+                    dagger: 'dagger',
+                    daggerCompiler: 'dagger-compiler',
+                    daggerAndroid: 'dagger-android',
+                    daggerAndroidSupport: 'dagger-android-support',
+                    daggerAndroidCompiler: 'dagger-android-processor'
+            ],
+            version: '2.10'
+    ]
+
+    rxJava = [
+            group: 'io.reactivex.rxjava2',
+            name: 'rxjava',
+            version: '2.1.0'
+    ]
+
+    rxAndroid = [
+            group: 'io.reactivex.rxjava2',
+            name: 'rxandroid',
+            version: '2.0.1'
+    ]
+
+    javaxAnnotation = [
+            group: 'javax.annotation',
+            name: 'jsr250-api',
+            version: '1.0'
+    ]
+
+    retrofit = [
+            group: 'com.squareup.retrofit2',
+            names: [
+                    retrofit: 'retrofit',
+                    jacksonConverter: 'converter-jackson',
+                    rxJavaAdapter: 'adapter-rxjava2'
+            ],
+            version: '2.3.0'
+    ]
+
+    zxingEmbedded = [
+            group: 'com.journeyapps',
+            name: 'zxing-android-embedded',
+            version: '3.5.0'
+    ]
+
+    /* TESTING */
+    // junit -> to perform unit test running on the local jvm
+    junit = [
+            group: 'junit',
+            name: 'junit',
+            version: '4.12'
+    ]
+
+    // mockito -> to mock regular java classes (can be used with junit for unit test)
+    mockito = [
+            group: 'org.mockito',
+            name: 'mockito-core',
+            version: '2.2.27'
+    ]
+
+    // robolectric -> to mock Android classes (it allows to run the tests on the jvm, without the need of an actual or virtual android device)
+    robolectric = [
+            group: 'org.robolectric',
+            name: 'robolectric',
+            version: '3.1.4'
+    ]
+
+    // test
+    supportTest = [
+            group: 'com.android.support.test',
+            names: [
+                    runner: 'runner', // runner
+                    rules: 'rules' // rules
+            ],
+            version: '0.5'
+    ]
+
+    // espresso -> to perform instrumentation test
+    espresso = [
+            group: 'com.android.support.test.espresso',
+            names: [
+                    core: 'espresso-core', // core
+                    contrib: 'espresso-contrib', // contrib for DatePicker, RecyclerView, Drawer actions, Accessibility checks, CountingIdlingResource
+                    web: 'espresso-web', // web for WebView support
+                    idlingRes: 'espresso-idling-resource', // idling-resource for synchronization with background jobs
+                    intents: 'espresso-intents' // intents for validation and stubbing of Intents
+            ],
+            version: '2.2.2'
+    ]
+
+    // UiAutomator
+    uiAutomator = [
+            group: 'com.android.support.test.uiautomator',
+            name: 'uiautomator-v18',
+            version: '2.1.2'
+    ]
+
+}

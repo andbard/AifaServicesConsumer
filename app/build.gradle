@@ -1,0 +1,130 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion androidSdkVersions.compile
+    buildToolsVersion androidBuildToolsVersion
+
+    defaultConfig {
+        applicationId appId
+        minSdkVersion androidSdkVersions.min
+        targetSdkVersion androidSdkVersions.target
+        versionCode getAppVersionCode()
+        versionName getAppVersionName()
+
+        // Specifies the application ID for the test APK
+        testApplicationId appId + '.test'
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        release {
+            try {
+                storeFile file(keystoreProperties['RELEASE_STORE_FILE'])
+                storePassword keystoreProperties['RELEASE_STORE_PASSWORD']
+                keyAlias keystoreProperties['RELEASE_KEY_ALIAS']
+                keyPassword keystoreProperties['RELEASE_KEY_PASSWORD']
+            } catch (ex) {
+                throw new InvalidUserDataException(
+                        "You should define RELEASE_STORE_FILE (the path of the keystore), " +
+                                "RELEASE_STORE_PASSWORD (the keystore password), " +
+                                "RELEASE_KEY_ALIAS (the alias of the debug certificate) and " +
+                                "RELEASE_KEY_PASSWORD (the password of the debug certificate) in gradle.properties" + "\n" + ex.message)
+            }
+        }
+    }
+
+    productFlavors {
+        mock { // offline-mocked version
+            applicationId appId + ".mock"
+            versionName getAppVersionName() + "-mock"
+        }
+
+        prod { // online prod version
+            applicationId appId + ".prod"
+            versionName getAppVersionName() + "-prod"
+        }
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix '.debug'
+            minifyEnabled false
+            testCoverageEnabled false
+        }
+
+        release {
+            applicationIdSuffix '.release'
+            signingConfig signingConfigs.release
+            minifyEnabled true
+            debuggable false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            testCoverageEnabled true
+        }
+    }
+
+    sourceSets {
+        mock {
+            assets.srcDirs = ['src/mock/assets']
+        }
+    }
+
+    packagingOptions {
+        exclude('LICENSE')
+
+        pickFirst 'META-INF/LICENSE'
+        pickFirst 'META-INF/LICENSE.txt'
+        pickFirst 'META-INF/license.txt'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    compile(group: support.group, name: support.names.appCompat, version: support.version)
+    compile(group: support.group, name: support.names.gridLayout, version: support.version)
+    compile(group: support.group, name: support.names.recyclerView, version: support.version)
+    compile(group: support.group, name: support.names.cardView, version: support.version)
+
+    /* Dagger */
+    compile(group: dagger.group, name: dagger.names.dagger, version: dagger.version)
+    annotationProcessor(group: dagger.group, name: dagger.names.daggerCompiler, version: dagger.version)
+
+    /* ButterKnife */
+    compile(group: butterKnife.group, name: butterKnife.names.butterKnife, version: butterKnife.version)
+    annotationProcessor(group: butterKnife.group, name: butterKnife.names.butterKnifeCompiler, version: butterKnife.version)
+
+    /* Timber */
+    compile(group: timber.group, name: timber.name, version: timber.version)
+
+    /* RxJava */
+    compile(group: rxJava.group, name: rxJava.name, version: rxJava.version)
+
+    /* RxAndroid */
+    compile(group: rxAndroid.group, name: rxAndroid.name, version: rxAndroid.version)
+
+    /* Retrofit */
+    compile(group: retrofit.group, name: retrofit.names.retrofit, version: retrofit.version)
+    compile(group: retrofit.group, name: retrofit.names.jacksonConverter, version: retrofit.version)
+    compile(group: retrofit.group, name: retrofit.names.rxJavaAdapter, version: retrofit.version)
+
+    /* XZing embedded */
+    compile(group: zxingEmbedded.group, name:zxingEmbedded.name, version: zxingEmbedded.version)
+
+    /***********/
+    /* TESTING */
+    /***********/
+    testProvided 'javax.annotation:jsr250-api:1.0'
+
+    /* unit test dependencies */
+    testCompile(group: junit.group, name: junit.name, version: junit.version)
+
+    testCompile(group: dagger.group, name: dagger.names.dagger, version: dagger.version)
+    testAnnotationProcessor(group: dagger.group, name: dagger.names.daggerCompiler, version: dagger.version)
+
+    /* instrumentation test dependencies */
+    androidTestCompile(group: espresso.group, name: espresso.names.core, version: espresso.version,
+            {
+                exclude group: support.group
+            }
+    )
+}

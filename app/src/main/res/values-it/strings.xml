@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="fa_barcode">&#xf02a;\nbarcode</string>
+    <string name="fa_drug">&#xf0c3;\nfarmaco</string>
+    <string name="fa_active_ingredient">&#xf069;\nprincipio attivo</string>
+    <string name="fa_industry">&#xf275;\nazienda</string>
+    <string name="fa_search">&#xf002;</string>
+
+    <string name="search">Cerca</string>
+    <string name="by">per</string>
+    <string name="search_by">Cerca per</string>
+    <string name="drug_info">Informazioni farmaco</string>
+
+    <string name="barcode">codice a barre</string>
+    <string name="drug">farmaco</string>
+    <string name="active_ingredient">principio attivo</string>
+    <string name="industry">azienda</string>
+    <string name="search_activity_label">Cerca</string>
+    <string name="brochure">foglio illustrativo</string>
+    <string name="characteristics_summary">riassunto delle caratteristiche del prodotto</string>
+
+</resources>

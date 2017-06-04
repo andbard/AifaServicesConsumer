@@ -1,0 +1,61 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply from: 'buildsystem/dependencies.gradle'
+
+buildscript {
+    repositories {
+        jcenter()
+        maven {
+            url "https://maven.google.com"
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.2'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+/* Define extra properties */
+ext.appId = 'com.andreabardella.aifaservicesconsumer'
+
+ext.appVersions = [
+        major: 0,   // [0, inf)
+        minor: 0,   // [0, inf)
+        build: 1    // [0, 99]
+]
+
+ext.androidSdkVersions = [
+        min     : 16,
+        target  : 25,
+        compile : 25
+]
+
+ext.androidBuildToolsVersion = '25.0.2'
+
+//ext.javaVersion = '1.7'
+//ext.javaSourceCompatibility = '1.8'
+//ext.javaTargetCompatibility = '1.8'
+
+ext.keystorePropertiesFile = file('keystore.properties')
+ext.keystoreProperties = new Properties();
+ext.keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+/* Define methods */
+ext.getAppVersionCode = {
+    (appVersions.major * 10 + appVersions.minor) * 100 + appVersions.build
+}
+
+ext.getAppVersionName = { ->
+    "$appVersions.major.$appVersions.minor.$appVersions.build"
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

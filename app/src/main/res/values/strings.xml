@@ -1,0 +1,30 @@
+<resources>
+
+    <!--<string name="app_name" translatable="false">Aifa Services Consumer</string>
+    <string name="file_provider_authority" translatable="false">com.andreabardella.aifaservicesconsumer.fileprovider</string>-->
+
+    <!-- Font Awesome -->
+    <!--<string name="fa_barcode" translatable="false">&#xf02a;\n\nbarcode</string>
+    <string name="fa_drug" translatable="false">&#xf0c3;\n\ndrug</string>
+    <string name="fa_active_ingredient" translatable="false">&#xf069;\n\nactive ingredient</string>
+    <string name="fa_industry" translatable="false">&#xf275;\n\nindustry</string>
+    <string name="fa_search" translatable="false">&#xf002;</string>-->
+    <string name="fa_barcode">&#xf02a;\nbarcode</string>
+    <string name="fa_drug">&#xf0c3;\ndrug</string>
+    <string name="fa_active_ingredient">&#xf069;\nactive ingredient</string>
+    <string name="fa_industry">&#xf275;\nindustry</string>
+    <string name="fa_search">&#xf002;</string>
+
+    <string name="search">Search</string>
+    <string name="by">by</string>
+    <string name="search_by">Search by</string>
+    <string name="drug_info">Drug info</string>
+
+    <string name="barcode">barcode</string>
+    <string name="drug">drug</string>
+    <string name="active_ingredient">active ingredient</string>
+    <string name="industry">industry</string>
+    <string name="search_activity_label">Search Activity</string>
+    <string name="brochure">brochure</string>
+    <string name="characteristics_summary">characteristics summary</string>
+</resources>

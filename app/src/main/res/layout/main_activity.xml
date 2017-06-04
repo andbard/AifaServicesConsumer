@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:padding="8dp">
+        <com.andreabardella.aifaservicesconsumer.view.FontAwesomeTextView
+            android:id="@+id/main_activity_search_by_barcode"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:text="@string/fa_barcode"
+            android:textSize="40sp"
+            android:gravity="center"
+            android:background="@drawable/rect_round_corner"/>
+        <com.andreabardella.aifaservicesconsumer.view.FontAwesomeTextView
+            android:id="@+id/main_activity_search_by_drug"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:text="@string/fa_drug"
+            android:textSize="40sp"
+            android:gravity="center"
+            android:background="@drawable/rect_round_corner"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:padding="8dp">
+        <com.andreabardella.aifaservicesconsumer.view.FontAwesomeTextView
+            android:id="@+id/main_activity_search_by_active_ingredient"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:text="@string/fa_active_ingredient"
+            android:textSize="40sp"
+            android:gravity="center"
+            android:background="@drawable/rect_round_corner"/>
+        <com.andreabardella.aifaservicesconsumer.view.FontAwesomeTextView
+            android:id="@+id/main_activity_search_by_industry"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:text="@string/fa_industry"
+            android:textSize="40sp"
+            android:gravity="center"
+            android:background="@drawable/rect_round_corner"/>
+    </LinearLayout>
+
+</LinearLayout>
+
+
+<!--<android.support.v7.widget.GridLayout-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_width="match_parent"-->
+    <!--app:orientation="horizontal"-->
+    <!--app:columnCount="2"-->
+    <!--app:rowCount="2">-->
+
+    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+
+    <!--<com.andreabardella.aifaservicesconsumer.view.FontAwesomeTextView-->
+        <!--android:id="@+id/main_activity_search_by_barcode"-->
+        <!--app:layout_row="0"-->
+        <!--app:layout_column="0"-->
+        <!--app:layout_columnWeight="1"-->
+        <!--app:layout_rowWeight="1"-->
+        <!--android:layout_margin="8dp"-->
+        <!--android:text="@string/fa_barcode"-->
+        <!--android:textSize="40sp"-->
+        <!--android:gravity="center"-->
+        <!--android:background="@drawable/rect_round_corner"/>-->
+
+    <!--<com.andreabardella.aifaservicesconsumer.view.FontAwesomeTextView-->
+        <!--android:id="@+id/main_activity_search_by_drug"-->
+        <!--app:layout_row="0"-->
+        <!--app:layout_column="1"-->
+        <!--app:layout_columnWeight="1"-->
+        <!--app:layout_rowWeight="1"-->
+        <!--android:layout_margin="8dp"-->
+        <!--android:text="@string/fa_drug"-->
+        <!--android:textSize="40sp"-->
+        <!--android:gravity="center"-->
+        <!--android:background="@drawable/rect_round_corner"/>-->
+
+    <!--<com.andreabardella.aifaservicesconsumer.view.FontAwesomeTextView-->
+        <!--android:id="@+id/main_activity_search_by_active_ingredient"-->
+        <!--app:layout_row="1"-->
+        <!--app:layout_column="0"-->
+        <!--app:layout_columnWeight="1"-->
+        <!--app:layout_rowWeight="1"-->
+        <!--android:layout_margin="8dp"-->
+        <!--android:text="@string/fa_active_ingredient"-->
+        <!--android:textSize="40sp"-->
+        <!--android:gravity="center"-->
+        <!--android:background="@drawable/rect_round_corner"/>-->
+
+    <!--<com.andreabardella.aifaservicesconsumer.view.FontAwesomeTextView-->
+        <!--android:id="@+id/main_activity_search_by_industry"-->
+        <!--app:layout_row="1"-->
+        <!--app:layout_column="1"-->
+        <!--app:layout_columnWeight="1"-->
+        <!--app:layout_rowWeight="1"-->
+        <!--android:layout_margin="8dp"-->
+        <!--android:text="@string/fa_industry"-->
+        <!--android:textSize="40sp"-->
+        <!--android:gravity="center"-->
+        <!--android:background="@drawable/rect_round_corner"/>-->
+
+<!--</android.support.v7.widget.GridLayout>-->

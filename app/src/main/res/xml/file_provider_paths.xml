@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Folgio Illustrativo -> bugiardino -> patient information leaflet -->
+    <!-- Riassunti delle Caratteristiche del Prodotto -> Summary of Product Characteristics -->
+    <!-- drug information sheet -->
+    <!--<files-path name="patient_information_leaflet_internal_dir" path="patient_information_leaflet"/>
+    <files-path name="product_characteristics_summary_internal_dir" path="product_characteristics_summary"/>-->
+
+    <cache-path name="cache_dir" path="documents" />
+
+</paths>
