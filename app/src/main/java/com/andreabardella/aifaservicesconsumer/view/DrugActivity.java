@@ -27,7 +27,6 @@ import java.io.File;
 import javax.inject.Inject;
 
 import butterknife.BindView;
-import dagger.MembersInjector;
 import io.reactivex.Observable;
 import io.reactivex.ObservableSource;
 import io.reactivex.ObservableTransformer;
@@ -83,6 +82,8 @@ public class DrugActivity extends BaseActivity {
 
     private String aic;
 
+    private boolean performDrugItemSearchOnResume = false;
+
     @Override
     protected Class<DrugActivityComponent> getComponentClass() {
         return DrugActivityComponent.class;
@@ -132,7 +133,7 @@ public class DrugActivity extends BaseActivity {
             Intent callingIntent = getIntent();
             if (callingIntent != null) {
                 aic = callingIntent.getStringExtra(MainActivity.SEARCH_TEXT);
-                getDrugByAic(aic);
+                performDrugItemSearchOnResume = true;
             }
         } else if (savedInstanceState != null) {
             isGetDrugItemInProgress = savedInstanceState.getBoolean("isGetDrugItemInProgress");
@@ -229,6 +230,8 @@ public class DrugActivity extends BaseActivity {
                     @Override
                     public void onNext(@NonNull Object o) {
                         drugItem = (DrugItem) o;
+                        getFiSize(drugItem.getFiUrl());
+                        getRcpSize(drugItem.getRcpUrl());
                     }
 
                     @Override
@@ -252,7 +255,7 @@ public class DrugActivity extends BaseActivity {
                 .subscribe(new Observer<Object>() {
                     @Override
                     public void onSubscribe(@NonNull Disposable d) {
-                        Timber.d("onSubscribe, url: %s, requestId: %d", url, requestId);
+//                        Timber.d("onSubscribe, url: %s, requestId: %d", url, requestId);
                     }
 
                     @Override
@@ -270,7 +273,7 @@ public class DrugActivity extends BaseActivity {
 
                     @Override
                     public void onComplete() {
-                        Timber.d("onComplete, url: %s, requestId: %d", url, requestId);
+//                        Timber.d("onComplete, url: %s, requestId: %d", url, requestId);
                     }
                 });
     }
@@ -282,7 +285,7 @@ public class DrugActivity extends BaseActivity {
                 .subscribe(new Observer<Object>() {
                     @Override
                     public void onSubscribe(@NonNull Disposable d) {
-                        Timber.d("onSubscribe, url: %s, requestId: %d", url, requestId);
+//                        Timber.d("onSubscribe, url: %s, requestId: %d", url, requestId);
                     }
 
                     @Override
@@ -300,7 +303,7 @@ public class DrugActivity extends BaseActivity {
 
                     @Override
                     public void onComplete() {
-                        Timber.d("onComplete, url: %s, requestId: %d", url, requestId);
+//                        Timber.d("onComplete, url: %s, requestId: %d", url, requestId);
                     }
                 });
     }
@@ -312,7 +315,7 @@ public class DrugActivity extends BaseActivity {
                 .subscribe(new Observer<Object>() {
                     @Override
                     public void onSubscribe(@NonNull Disposable d) {
-                        Timber.d("onSubscribe, url: %s, requestId: %d", url, requestId);
+//                        Timber.d("onSubscribe, url: %s, requestId: %d", url, requestId);
                     }
 
                     @Override
@@ -337,7 +340,7 @@ public class DrugActivity extends BaseActivity {
 
                     @Override
                     public void onComplete() {
-                        Timber.d("onComplete, url: %s, requestId: %d", url, requestId);
+//                        Timber.d("onComplete, url: %s, requestId: %d", url, requestId);
                     }
                 });
     }
@@ -349,7 +352,7 @@ public class DrugActivity extends BaseActivity {
                 .subscribe(new Observer<Object>() {
                     @Override
                     public void onSubscribe(@NonNull Disposable d) {
-                        Timber.d("onSubscribe, url: %s, requestId: %d", url, requestId);
+//                        Timber.d("onSubscribe, url: %s, requestId: %d", url, requestId);
                     }
 
                     @Override
@@ -361,7 +364,7 @@ public class DrugActivity extends BaseActivity {
                             return;
                         }
                         String path = file.getPath();
-                        Timber.d("onNext, url: %s, requestId: %d, path: %s", url, requestId, path);
+//                        Timber.d("onNext, url: %s, requestId: %d, path: %s", url, requestId, path);
                         drugItem.setRcpPath(path);
                     }
 
@@ -374,7 +377,7 @@ public class DrugActivity extends BaseActivity {
 
                     @Override
                     public void onComplete() {
-                        Timber.d("onComplete, url: %s, requestId: %d", url, requestId);
+//                        Timber.d("onComplete, url: %s, requestId: %d", url, requestId);
                     }
                 });
     }
@@ -385,6 +388,10 @@ public class DrugActivity extends BaseActivity {
         if (isGetDrugItemInProgress) {
             onGetDrugItemInProgress();
             getDrugByAic(aic);
+        } else if (performDrugItemSearchOnResume) {
+            onGetDrugItemInProgress();
+            getDrugByAic(aic);
+            performDrugItemSearchOnResume = false;
         }
         if (isGetFiSizeInProgress) {
             onGetFiSizeInProgress();
@@ -554,8 +561,6 @@ public class DrugActivity extends BaseActivity {
     private void onGetDrugItemCompleted() {
         drugItemPb.setVisibility(View.GONE);
         setDrugItemUI(drugItem);
-        getFiSize(drugItem.getFiUrl());
-        getRcpSize(drugItem.getRcpUrl());
     }
 
     private void onGetFiSizeCompleted() {
@@ -571,12 +576,18 @@ public class DrugActivity extends BaseActivity {
     }
 
     private void onGetFiCompleted() {
+        fiPb.setVisibility(View.GONE);
+        fiBtn.setVisibility(View.VISIBLE);
+        fiBtn.setEnabled(drugItem.getFiSize() > 0);
         File file = new File(drugItem.getFiPath());
         Uri uri = FileProvider.getUriForFile(this, getString(R.string.file_provider_authority), file);
         showPdf(uri);
     }
 
     private void onGetRcpCompleted() {
+        rcpPb.setVisibility(View.GONE);
+        rcpBtn.setVisibility(View.VISIBLE);
+        rcpBtn.setEnabled(drugItem.getRcpSize() > 0);
         File file = new File(drugItem.getRcpPath());
         Uri uri = FileProvider.getUriForFile(this, getString(R.string.file_provider_authority), file);
         showPdf(uri);

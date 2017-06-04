@@ -162,9 +162,10 @@ public class RestApiManager extends BaseApiManager {
     protected Observable<Integer> getPatientInformationLeafletSizeBeforeDisposableSetup(String url) {
         String[] arr = url.split("pdfFileName=");
         if (arr.length > 1) {
-            String fileName = arr[1];
-            Observable<Response<Void>> observable = apiServices.headFi(fileName); // footer_001392_042692_FI.pdf&retry=0&sys=m0b1l3
-            observable.map(new Function<Response<Void>, Integer>() {
+            String partialUrl = arr[1];
+            String[] array = parseUrlFromPdfFileName(partialUrl);
+            Observable<Response<Void>> observable = apiServices.headFi(docsBaseUrl, array[0], array[1], array[2]); // footer_001392_042692_FI.pdf&retry=0&sys=m0b1l3
+            return observable.map(new Function<Response<Void>, Integer>() {
                 @Override
                 public Integer apply(@NonNull Response<Void> voidResponse) throws Exception {
                     Headers headers = voidResponse.headers();
@@ -184,9 +185,10 @@ public class RestApiManager extends BaseApiManager {
     protected Observable<Integer> getProductCharacteristicsSummarySizeBeforeDisposableSetup(String url) {
         String[] arr = url.split("pdfFileName=");
         if (arr.length > 1) {
-            String fileName = arr[1];
-            Observable<Response<Void>> observable = apiServices.headRcp(fileName); // footer_001392_042692_RCP.pdf&retry=0&sys=m0b1l3
-            observable.map(new Function<Response<Void>, Integer>() {
+            String partialUrl = arr[1];
+            String[] array = parseUrlFromPdfFileName(partialUrl);
+            Observable<Response<Void>> observable = apiServices.headRcp(docsBaseUrl, array[0], array[1], array[2]); // footer_001392_042692_RCP.pdf&retry=0&sys=m0b1l3
+            return observable.map(new Function<Response<Void>, Integer>() {
                 @Override
                 public Integer apply(@NonNull Response<Void> voidResponse) throws Exception {
                     Headers headers = voidResponse.headers();
@@ -206,16 +208,17 @@ public class RestApiManager extends BaseApiManager {
     protected Observable<File> getPatientInformationLeafletBeforeDisposableSetup(String url) {
         String[] arr = url.split("pdfFileName=");
         if (arr.length > 1) {
-            final String fileName = arr[1];
-            Observable<ResponseBody> observable = apiServices.getFi(fileName); // footer_001392_042692_FI.pdf&retry=0&sys=m0b1l3
-            observable.map(new Function<ResponseBody, File>() {
+            String partialUrl = arr[1];
+            final String[] array = parseUrlFromPdfFileName(partialUrl);
+            Observable<ResponseBody> observable = apiServices.getFi(docsBaseUrl, array[0], array[1], array[2]); // footer_001392_042692_FI.pdf&retry=0&sys=m0b1l3
+            return observable.map(new Function<ResponseBody, File>() {
                 @Override
                 public File apply(@NonNull ResponseBody responseBody) throws Exception {
                     File dir = new File(context.getCacheDir(), "documents");
                     if (!dir.isDirectory()) {
                         dir.mkdirs();
                     }
-                    File file = File.createTempFile((fileName.split("&")[0]).split(".")[0], ".pdf", dir);
+                    File file = File.createTempFile(array[0].split("\\.")[0], ".pdf", dir);
                     if (FileUtils.copy(responseBody.byteStream(), file)) {
                         return file;
                     }
@@ -235,16 +238,17 @@ public class RestApiManager extends BaseApiManager {
     protected Observable<File> getProductCharacteristicsSummaryBeforeDisposableSetup(String url) {
         String[] arr = url.split("pdfFileName=");
         if (arr.length > 1) {
-            final String fileName = arr[1];
-            Observable<ResponseBody> observable = apiServices.getRcp(fileName); // footer_001392_042692_RCP.pdf&retry=0&sys=m0b1l3
-            observable.map(new Function<ResponseBody, File>() {
+            String partialUrl = arr[1];
+            final String[] array = parseUrlFromPdfFileName(partialUrl);
+            Observable<ResponseBody> observable = apiServices.getRcp(docsBaseUrl, array[0], array[1], array[2]); // footer_001392_042692_RCP.pdf&retry=0&sys=m0b1l3
+            return observable.map(new Function<ResponseBody, File>() {
                 @Override
                 public File apply(@NonNull ResponseBody responseBody) throws Exception {
                     File dir = new File(context.getCacheDir(), "documents");
                     if (!dir.isDirectory()) {
                         dir.mkdirs();
                     }
-                    File file = File.createTempFile((fileName.split("&")[0]).split(".")[0], ".pdf", dir);
+                    File file = File.createTempFile(array[0].split("\\.")[0], ".pdf", dir);
                     if (FileUtils.copy(responseBody.byteStream(), file)) {
                         return file;
                     }
@@ -259,4 +263,28 @@ public class RestApiManager extends BaseApiManager {
             }
         });
     }
+
+    private String[] parseUrlFromPdfFileName(String partialUrl) {
+        String[] array = partialUrl.split("&");
+        String name = "";
+        String retry = "";
+        String sys = "";
+        for (int i=0; i<array.length; i++) {
+            switch (i) {
+                case 0:
+                    name = array[0];
+                    break;
+                case 1:
+                    retry = array[1].split("=")[1];
+                    break;
+                case 2:
+                    sys = array[2].split("=")[1];
+                    break;
+            }
+        }
+        String[] result = new String[] {name, retry, sys};
+        return result;
+    }
+
+    private static final String docsBaseUrl = "https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet";
 }

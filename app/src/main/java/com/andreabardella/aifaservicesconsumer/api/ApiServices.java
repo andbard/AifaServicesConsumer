@@ -9,6 +9,7 @@ import retrofit2.http.GET;
 import retrofit2.http.HEAD;
 import retrofit2.http.Headers;
 import retrofit2.http.Query;
+import retrofit2.http.Url;
 
 public interface ApiServices {
 
@@ -108,30 +109,42 @@ public interface ApiServices {
     /* FI */
     /******/
 //    https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_001392_042692_FI.pdf&retry=0&sys=m0b1l3
-    @HEAD("/aifa/servlet/PdfDownloadServlet")
+    @HEAD
     @Headers("Accept: application/json")
     Observable<Response<Void>> headFi(
-            @Query("pdfFileName") String pdfFileName
+            @Url String url,
+            @Query(value = "pdfFileName", encoded = true) String pdfFileName,
+            @Query(value = "retry", encoded = true) String retry,
+            @Query(value = "sys", encoded = true) String sys
     );
-    @GET("/aifa/servlet/PdfDownloadServlet")
+    @GET
     @Headers("Accept: application/json")
     Observable<ResponseBody> getFi(
-            @Query("pdfFileName") String pdfFileName
+            @Url String url,
+            @Query(value = "pdfFileName", encoded = true) String pdfFileName,
+            @Query(value = "retry", encoded = true) String retry,
+            @Query(value = "sys", encoded = true) String sys
     );
 
     /*******/
     /* RCP */
     /*******/
 //    https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_001392_042692_RCP.pdf&retry=0&sys=m0b1l3
-    @HEAD("/aifa/servlet/PdfDownloadServlet")
+    @HEAD
     @Headers("Accept: application/json")
     Observable<Response<Void>> headRcp(
-            @Query("pdfFileName") String pdfFileName
+            @Url String url,
+            @Query(value = "pdfFileName", encoded = true) String pdfFileName,
+            @Query(value = "retry", encoded = true) String retry,
+            @Query(value = "sys", encoded = true) String sys
     );
-    @HEAD("/aifa/servlet/PdfDownloadServlet")
+    @GET
     @Headers("Accept: application/json")
     Observable<ResponseBody> getRcp(
-            @Query("pdfFileName") String pdfFileName
+            @Url String url,
+            @Query(value = "pdfFileName", encoded = true) String pdfFileName,
+            @Query(value = "retry", encoded = true) String retry,
+            @Query(value = "sys", encoded = true) String sys
     );
 
 }
