@@ -1,0 +1,173 @@
+{
+	"variables": [],
+	"info": {
+		"name": "aifa",
+		"_postman_id": "dae1c86d-9d94-53fa-43b0-4edc9c382c83",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getByDrugMax10",
+			"request": {
+				"url": "https://www.agenziafarmaco.gov.it/services/search/select?fl=sm_field_codice_farmaco,sm_field_descrizione_farmaco,sm_field_descrizione_ditta&q=bundle:confezione_farmaco+sm_field_descrizione_farmaco:nimes*&df=sm_field_descrizione_farmaco&wt=json&rows=10",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "GET drug by drugCode\nsm_field_codice_farmaco = 025829\nrows = 4"
+			},
+			"response": []
+		},
+		{
+			"name": "getByDrugFrom2Max4",
+			"request": {
+				"url": "https://www.agenziafarmaco.gov.it/services/search/select?q=bundle:confezione_farmaco+sm_field_descrizione_farmaco:nimes*&df=sm_field_descrizione_farmaco&wt=json&rows=4&start=2&fl=sm_field_codice_farmaco,sm_field_descrizione_farmaco,sm_field_descrizione_ditta",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "GET drug by drugName using paging\nsm_field_descrizione_farmaco = nimes*\nrows = 2\nstart = 2"
+			},
+			"response": []
+		},
+		{
+			"name": "getDrugPackageListByDrug",
+			"request": {
+				"url": "https://www.agenziafarmaco.gov.it/services/search/select?fl=sm_field_codice_farmaco,sm_field_descrizione_farmaco,sm_field_descrizione_ditta&q=bundle:confezione_farmaco+sm_field_descrizione_farmaco:nimesulide*&df=sm_field_descrizione_farmaco&wt=json&rows=1000",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getDrugListByDrug",
+			"request": {
+				"url": "https://www.agenziafarmaco.gov.it/services/search/select?fl=sm_field_codice_farmaco,sm_field_descrizione_farmaco,sm_field_descrizione_ditta&q=bundle:farmaco+sm_field_descrizione_farmaco:nimesulide*&df=sm_field_descrizione_farmaco&wt=json&rows=1000",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getByActiveIngredient",
+			"request": {
+				"url": "https://www.agenziafarmaco.gov.it/services/search/select?fl=sm_field_codice_farmaco,sm_field_descrizione_farmaco,sm_field_descrizione_ditta,sm_field_descrizione_atc,sm_field_codice_atc&q=bundle:confezione_farmaco+sm_field_descrizione_atc:parac*&df=sm_field_descrizione_atc&wt=json&rows=1000",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getByIndustry",
+			"request": {
+				"url": "https://www.agenziafarmaco.gov.it/services/search/select?fl=sm_field_descrizione_ditta,sm_field_codice_ditta&q=bundle:confezione_farmaco+sm_field_descrizione_ditta:lab*&df=sm_field_descrizione_ditta&wt=json&rows=1000",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getByAic",
+			"request": {
+				"url": "https://www.agenziafarmaco.gov.it/services/search/select?q=bundle:confezione_farmaco+sm_field_codice_farmaco:029007&wt=json&rows=1000&df=sm_field_descrizione_ditta",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "headFi",
+			"request": {
+				"url": "https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_001392_042692_FI.pdf&retry=0&sys=m0b1l3",
+				"method": "HEAD",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "headRcp",
+			"request": {
+				"url": "https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet?pdfFileName=footer_001392_042692_RCP.pdf&retry=0&sys=m0b1l3",
+				"method": "HEAD",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getByDrug(mesu) confezione_farmaco",
+			"request": {
+				"url": "https://www.agenziafarmaco.gov.it/services/search/select?fl=sm_field_codice_farmaco,sm_field_descrizione_farmaco,sm_field_descrizione_ditta&q=bundle:confezione_farmaco+sm_field_descrizione_farmaco:*mesu*&df=sm_field_descrizione_farmaco&wt=json&rows=1000",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getByDrug(mesu) farmaco",
+			"request": {
+				"url": "https://www.agenziafarmaco.gov.it/services/search/select?fl=sm_field_codice_farmaco,sm_field_descrizione_farmaco,sm_field_descrizione_ditta&q=bundle:farmaco+sm_field_descrizione_farmaco:*mesu*&df=sm_field_descrizione_farmaco&wt=json&rows=1000",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getByActiveIngredientLight",
+			"request": {
+				"url": "https://www.agenziafarmaco.gov.it/services/search/select?fl=sm_field_codice_atc,sm_field_descrizione_atc&q=bundle:confezione_farmaco+sm_field_descrizione_atc:*arac*&df=sm_field_descrizione_atc&wt=json&rows=1000",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
