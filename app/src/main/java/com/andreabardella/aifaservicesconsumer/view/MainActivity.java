@@ -90,13 +90,22 @@ public class MainActivity extends AppCompatActivity {
         integrator.initiateScan();
     }
 
+    private static final String base32 = "0123456789BCDFGHJKLMNPQRSTUVWXYZ";
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
         if (result != null) {
             String reading = result.getContents();
             if (reading != null) {
-                searchBy(SearchType.AIC, reading.substring(0, 6));
+                String out = "";
+                for (int i=0; i<reading.length(); i++) {
+                    int j = 0;
+                    while (j < base32.length() && base32.charAt(j) != reading.charAt(i)) {
+                        j++;
+                    }
+                    out += j;
+                }
+                searchBy(SearchType.AIC, out.substring(0, 6));
             } else {
                 Toast.makeText(MainActivity.this, "No reading performed", Toast.LENGTH_LONG).show();
             }
