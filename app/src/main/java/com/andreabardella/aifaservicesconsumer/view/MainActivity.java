@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import com.andreabardella.aifaservicesconsumer.R;
 import com.andreabardella.aifaservicesconsumer.SearchType;
+import com.andreabardella.aifaservicesconsumer.util.Code39Conversion;
 import com.andreabardella.aifaservicesconsumer.util.PermissionUtils;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.integration.android.IntentIntegrator;
@@ -18,6 +19,7 @@ import java.util.Collections;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import timber.log.Timber;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,15 +31,6 @@ public class MainActivity extends AppCompatActivity {
     public static final String SEARCH_BY = "SEARCH_BY";
     public static final String SEARCH_TEXT = "SEARCH_TEXT";
     public static final String SEARCH_INDUSTRY_CODE = "SEARCH_INDUSTRY_CODE";
-
-    /*@BindView(R.id.main_activity_search_by_barcode)
-    FontAwesomeTextView barcodeView;
-    @BindView(R.id.main_activity_search_by_drug)
-    FontAwesomeTextView drugView;
-    @BindView(R.id.main_activity_search_by_active_ingredient)
-    FontAwesomeTextView activeIngredientView;
-    @BindView(R.id.main_activity_search_by_industry)
-    FontAwesomeTextView industryView;*/
 
     @OnClick(R.id.main_activity_search_by_barcode)
     void searchByBarcode() {
@@ -90,24 +83,19 @@ public class MainActivity extends AppCompatActivity {
         integrator.initiateScan();
     }
 
-    private static final String base32 = "0123456789BCDFGHJKLMNPQRSTUVWXYZ";
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
         if (result != null) {
             String reading = result.getContents();
             if (reading != null) {
-                String out = "";
-                for (int i=0; i<reading.length(); i++) {
-                    int j = 0;
-                    while (j < base32.length() && base32.charAt(j) != reading.charAt(i)) {
-                        j++;
-                    }
-                    out += j;
+                try {
+                    String out = Code39Conversion.base32ToBase10(reading);
+                    searchBy(SearchType.AIC, out.substring(0, 6));
+                } catch (Exception e) {
+                    Timber.e(e);
+                    Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
                 }
-                searchBy(SearchType.AIC, out.substring(0, 6));
-            } else {
-                Toast.makeText(MainActivity.this, "No reading performed", Toast.LENGTH_LONG).show();
             }
         } else {
             Toast.makeText(MainActivity.this, "Something went wrong!\nUnable to read barcode!", Toast.LENGTH_LONG).show();
