@@ -126,7 +126,7 @@ public class DrugActivity extends BaseActivity {
             }
         });
 
-        if (presenter.getStatus() == PresenterStatus.CREATED) {
+        if (presenter.getStatus() == PresenterStatus.CREATED || savedInstanceState == null) {
             // the presenter has just been created because the this Activity has just been instantiated too
             // or the Activity has been popped out from its back-stack after the Android system kill the related application process
             isGetDrugItemInProgress = isGetFiSizeInProgress = isGetRcpSizeInProgress = isGetFiInProgress = isGetRcpInProgress = false;
@@ -182,7 +182,7 @@ public class DrugActivity extends BaseActivity {
                     intent.putExtra(MainActivity.SEARCH_BY, SearchType.INDUSTRY);
                     intent.putExtra(MainActivity.SEARCH_TEXT, industry.getName());
                     intent.putExtra(MainActivity.SEARCH_INDUSTRY_CODE, industry.getCode());
-                    builder.appendClickableSpanStartActivity(industry.getName(), intent, this, true);
+                    builder.appendClickableSpanStartActivity(industry.getName(), intent, this, false);
                 }
                 industryTv.setText(builder, TextView.BufferType.SPANNABLE);
                 industryTv.setMovementMethod(LinkMovementMethod.getInstance());
@@ -198,7 +198,7 @@ public class DrugActivity extends BaseActivity {
                     intent.putExtra(MainActivity.SEARCH_TYPE, SearchType.DRUG);
                     intent.putExtra(MainActivity.SEARCH_BY, SearchType.ACTIVE_INGREDIENT);
                     intent.putExtra(MainActivity.SEARCH_TEXT, str);
-                    builder.appendClickableSpanStartActivity(str, intent, this, true);
+                    builder.appendClickableSpanStartActivity(str, intent, this, false);
                 }
                 activeIngredientsTv.setText(builder, TextView.BufferType.SPANNABLE);
                 activeIngredientsTv.setMovementMethod(LinkMovementMethod.getInstance());
