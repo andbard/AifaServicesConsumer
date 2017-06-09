@@ -11,14 +11,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.andreabardella.aifaservicesconsumer.R;
 import com.andreabardella.aifaservicesconsumer.SearchType;
 import com.andreabardella.aifaservicesconsumer.base.BaseFragment;
 import com.andreabardella.aifaservicesconsumer.model.ActiveIngredientLight;
 import com.andreabardella.aifaservicesconsumer.model.DrugLight;
-import com.andreabardella.aifaservicesconsumer.model.IndustryLight;
+import com.andreabardella.aifaservicesconsumer.model.CompanyLight;
 import com.andreabardella.aifaservicesconsumer.model.ItemLight;
 
 import java.util.List;
@@ -147,8 +146,8 @@ public abstract class SearchFragment extends BaseFragment implements ItemLightAd
 //        }
 //        Toast.makeText(SearchFragment.this.getActivity(), str, Toast.LENGTH_SHORT).show();
 
-        if (item instanceof IndustryLight) {
-            listener.onSearchDrugsBy(item.getName(), SearchType.INDUSTRY, item.getCode());
+        if (item instanceof CompanyLight) {
+            listener.onSearchDrugsBy(item.getName(), SearchType.COMPANY, item.getCode());
         } else if (item instanceof ActiveIngredientLight) {
             listener.onSearchDrugsBy(item.getName(), SearchType.ACTIVE_INGREDIENT, null);
         } else if (item instanceof DrugLight) {

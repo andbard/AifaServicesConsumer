@@ -1,18 +1,18 @@
 package com.andreabardella.aifaservicesconsumer.dto.mapper;
 
 import com.andreabardella.aifaservicesconsumer.dto.DrugDto;
-import com.andreabardella.aifaservicesconsumer.model.IndustryLight;
+import com.andreabardella.aifaservicesconsumer.model.CompanyLight;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class DrugDtoToIndustryLightMapper {
+public class DrugDtoToCompanyLightMapper {
 
-    public static IndustryLight map(DrugDto input) {
-        IndustryLight output = null;
+    public static CompanyLight map(DrugDto input) {
+        CompanyLight output = null;
         if (input != null) {
-            output = new IndustryLight();
+            output = new CompanyLight();
             StringBuilder builder = new StringBuilder();
             boolean isFirstOccurrence = true;
             if (input.industryDescriptionList != null) {
@@ -29,11 +29,11 @@ public class DrugDtoToIndustryLightMapper {
         return output;
     }
 
-    public static List<IndustryLight> map(Collection<DrugDto> inputs) {
-        List<IndustryLight> outputs = new ArrayList<>();
+    public static List<CompanyLight> map(Collection<DrugDto> inputs) {
+        List<CompanyLight> outputs = new ArrayList<>();
         if (inputs != null && inputs.size() > 0) {
             for (DrugDto input : inputs) {
-                IndustryLight output = map(input);
+                CompanyLight output = map(input);
                 outputs.add(output);
             }
         }

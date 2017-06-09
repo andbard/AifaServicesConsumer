@@ -18,6 +18,8 @@ import retrofit2.converter.jackson.JacksonConverterFactory;
 @Module
 public class NetModule {
 
+    public static final String BASE_URL = "https://www.agenziafarmaco.gov.it";
+    public static final String DOCS_URL = "https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet";
 //    private String baseUrl = "https://www.agenziafarmaco.gov.it";
 
 //    public NetModule(String baseUrl) {
@@ -48,10 +50,10 @@ public class NetModule {
     @Singleton
     static Retrofit provideRetrofit(ObjectMapper mapper, OkHttpClient client) {
         Retrofit.Builder builder = new Retrofit.Builder();
-        builder.baseUrl("https://www.agenziafarmaco.gov.it")
+        builder.baseUrl(BASE_URL)
                 .client(client)
                 .addConverterFactory(JacksonConverterFactory.create(mapper))
-//                .addCallAdapterFactory(RxJava2CallAdapterFactory.createAsync()) // todo
+//                .addCallAdapterFactory(RxJava2CallAdapterFactory.createAsync())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.createWithScheduler(Schedulers.io()));
         return builder.build();
     }

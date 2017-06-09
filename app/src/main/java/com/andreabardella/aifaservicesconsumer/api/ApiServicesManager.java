@@ -4,7 +4,7 @@ import com.andreabardella.aifaservicesconsumer.SearchType;
 import com.andreabardella.aifaservicesconsumer.model.ActiveIngredientLight;
 import com.andreabardella.aifaservicesconsumer.model.DrugItem;
 import com.andreabardella.aifaservicesconsumer.model.DrugLight;
-import com.andreabardella.aifaservicesconsumer.model.IndustryLight;
+import com.andreabardella.aifaservicesconsumer.model.CompanyLight;
 
 import java.io.File;
 import java.util.Set;
@@ -44,7 +44,7 @@ public interface ApiServicesManager {
 
     void cancelGetProductCharacteristicsSummary();
 
-    Observable<Set<IndustryLight>> getIndustriesByIndustryName(String industry);
+    Observable<Set<CompanyLight>> getIndustriesByIndustryName(String industry);
 
     void cancelGetIndustriesByIndustryName();
 

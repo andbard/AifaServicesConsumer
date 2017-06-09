@@ -2,9 +2,9 @@ package com.andreabardella.aifaservicesconsumer.api;
 
 import com.andreabardella.aifaservicesconsumer.SearchType;
 import com.andreabardella.aifaservicesconsumer.model.ActiveIngredientLight;
+import com.andreabardella.aifaservicesconsumer.model.CompanyLight;
 import com.andreabardella.aifaservicesconsumer.model.DrugItem;
 import com.andreabardella.aifaservicesconsumer.model.DrugLight;
-import com.andreabardella.aifaservicesconsumer.model.IndustryLight;
 
 import java.io.File;
 import java.util.Set;
@@ -53,7 +53,7 @@ public abstract class BaseApiManager implements ApiServicesManager {
 
 
     @Override
-    public Observable<Set<IndustryLight>> getIndustriesByIndustryName(String industry) {
+    public Observable<Set<CompanyLight>> getIndustriesByIndustryName(String industry) {
         return getIndustriesByIndustryNameBeforeDisposableSetup(industry)
                 .doOnSubscribe(new Consumer<Disposable>() {
             @Override
@@ -64,7 +64,7 @@ public abstract class BaseApiManager implements ApiServicesManager {
                 });
     }
 
-    protected abstract Observable<Set<IndustryLight>> getIndustriesByIndustryNameBeforeDisposableSetup(String industry);
+    protected abstract Observable<Set<CompanyLight>> getIndustriesByIndustryNameBeforeDisposableSetup(String industry);
 
     @Override
     public void cancelGetIndustriesByIndustryName() {

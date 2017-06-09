@@ -2,10 +2,10 @@ package com.andreabardella.aifaservicesconsumer;
 
 public enum SearchType {
 
-    AIC(1, "aic"),
-    ACTIVE_INGREDIENT(2, "active_ingredient"),
-    DRUG(3, "drug"),
-    INDUSTRY(4, "industry");
+    DRUG(1, "drug"),
+    AIC(2, "aic"),
+    ACTIVE_INGREDIENT(3, "active_ingredient"),
+    COMPANY(4, "company");
 
     private String machineName;
     private int id;

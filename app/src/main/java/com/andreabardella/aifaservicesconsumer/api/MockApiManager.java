@@ -8,11 +8,11 @@ import com.andreabardella.aifaservicesconsumer.dto.ResponseDto;
 import com.andreabardella.aifaservicesconsumer.dto.mapper.DrugDtoToActiveIngredientLightMapper;
 import com.andreabardella.aifaservicesconsumer.dto.mapper.DrugDtoToDrugItemMapper;
 import com.andreabardella.aifaservicesconsumer.dto.mapper.DrugDtoToDrugLightMapper;
-import com.andreabardella.aifaservicesconsumer.dto.mapper.DrugDtoToIndustryLightMapper;
+import com.andreabardella.aifaservicesconsumer.dto.mapper.DrugDtoToCompanyLightMapper;
 import com.andreabardella.aifaservicesconsumer.model.ActiveIngredientLight;
+import com.andreabardella.aifaservicesconsumer.model.CompanyLight;
 import com.andreabardella.aifaservicesconsumer.model.DrugItem;
 import com.andreabardella.aifaservicesconsumer.model.DrugLight;
-import com.andreabardella.aifaservicesconsumer.model.IndustryLight;
 import com.andreabardella.aifaservicesconsumer.model.ItemLight;
 import com.andreabardella.aifaservicesconsumer.util.FileUtils;
 import com.andreabardella.aifaservicesconsumer.util.InputStreamConversion;
@@ -63,15 +63,15 @@ public class MockApiManager extends BaseApiManager {
     }
 
     @Override
-    protected Observable<Set<IndustryLight>> getIndustriesByIndustryNameBeforeDisposableSetup(String industry) {
-        return getItemLightSet(industry, SearchType.INDUSTRY, null)
-                .map(new Function<Set<? extends ItemLight>, Set<IndustryLight>>() {
+    protected Observable<Set<CompanyLight>> getIndustriesByIndustryNameBeforeDisposableSetup(String industry) {
+        return getItemLightSet(industry, SearchType.COMPANY, null)
+                .map(new Function<Set<? extends ItemLight>, Set<CompanyLight>>() {
                     @Override
-                    public Set<IndustryLight> apply(@NonNull Set<? extends ItemLight> itemLightSet) throws Exception {
-                        Timber.d("mapping ItemLight instances into IndustryLight ones");
-                        Set<IndustryLight> result = new HashSet<>();
+                    public Set<CompanyLight> apply(@NonNull Set<? extends ItemLight> itemLightSet) throws Exception {
+                        Timber.d("mapping ItemLight instances into CompanyLight ones");
+                        Set<CompanyLight> result = new HashSet<>();
                         for (ItemLight item : itemLightSet) {
-                            result.add((IndustryLight) item);
+                            result.add((CompanyLight) item);
                         }
                         return result;
                     }
@@ -119,7 +119,7 @@ public class MockApiManager extends BaseApiManager {
         return getPdf(url);
     }
 
-    /**********************************************************************************************/
+
     private Observable<Set<? extends ItemLight>> getItemLightSet(final String text, final SearchType type, SearchType by) {
         final GetItemLightSet getItemLightSet = new GetItemLightSet(text, type, by);
         return Observable.create(getItemLightSet)
@@ -174,7 +174,7 @@ public class MockApiManager extends BaseApiManager {
                 } else if (text.equals("error")) {
                     emitError = true;
                 }
-            } else if (type == SearchType.INDUSTRY) {
+            } else if (type == SearchType.COMPANY) {
                 if (text.equals("lab")) {
                     is = context.getAssets().open("getByIndustryLight_lab.json");
                 } else if (text.equals("error")) {
@@ -207,8 +207,8 @@ public class MockApiManager extends BaseApiManager {
                                 item = DrugDtoToDrugLightMapper.map(dto);
                             } else if (type == SearchType.ACTIVE_INGREDIENT) {
                                 item = DrugDtoToActiveIngredientLightMapper.map(dto);
-                            } else if (type == SearchType.INDUSTRY) {
-                                item = DrugDtoToIndustryLightMapper.map(dto);
+                            } else if (type == SearchType.COMPANY) {
+                                item = DrugDtoToCompanyLightMapper.map(dto);
                             }
                             if (item != null && !result.contains(item)) {
                                 result.add(item);

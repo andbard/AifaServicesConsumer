@@ -1,6 +1,5 @@
 package com.andreabardella.aifaservicesconsumer.view;
 
-import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,7 +8,6 @@ import android.widget.Toast;
 import com.andreabardella.aifaservicesconsumer.R;
 import com.andreabardella.aifaservicesconsumer.SearchType;
 import com.andreabardella.aifaservicesconsumer.util.Code39Conversion;
-import com.andreabardella.aifaservicesconsumer.util.PermissionUtils;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
@@ -46,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
     }
     @OnClick(R.id.main_activity_search_by_industry)
     void searchByIndustry() {
-        searchBy(SearchType.INDUSTRY, null);
+        searchBy(SearchType.COMPANY, null);
     }
 
     @Override

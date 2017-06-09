@@ -76,7 +76,7 @@ public class SearchActivity extends BaseActivity implements SearchFragment.Searc
         by = (SearchType) intent.getSerializableExtra(MainActivity.SEARCH_BY);
         setActivityTitle(type, by);
 
-        if (by == SearchType.INDUSTRY) {
+        if (by == SearchType.COMPANY) {
             industryCode = intent.getStringExtra(MainActivity.SEARCH_INDUSTRY_CODE);
         }
 
@@ -102,7 +102,7 @@ public class SearchActivity extends BaseActivity implements SearchFragment.Searc
             type = (SearchType) incomingIntent.getSerializableExtra(MainActivity.SEARCH_TYPE);
             by = (SearchType) incomingIntent.getSerializableExtra(MainActivity.SEARCH_BY);
 
-            if (by == SearchType.INDUSTRY) {
+            if (by == SearchType.COMPANY) {
                 industryCode = incomingIntent.getStringExtra(MainActivity.SEARCH_INDUSTRY_CODE);
             }
 
@@ -115,7 +115,7 @@ public class SearchActivity extends BaseActivity implements SearchFragment.Searc
                 case DRUG:
                     fragment = new DrugsFragment();
                     break;
-                case INDUSTRY:
+                case COMPANY:
                     fragment = new IndustriesFragment();
                     break;
                 case ACTIVE_INGREDIENT:
@@ -206,7 +206,7 @@ public class SearchActivity extends BaseActivity implements SearchFragment.Searc
             onSearchCompleted(items);
             if (performSearchOnResume) {
                 performSearchOnResume = false;
-                if (by != null && by == SearchType.INDUSTRY) {
+                if (by != null && by == SearchType.COMPANY) {
                     search(industryCode, type, by, true);
                 } else {
                     search(searchEt.getText().toString(), type, by, true);
@@ -287,7 +287,7 @@ public class SearchActivity extends BaseActivity implements SearchFragment.Searc
             case ACTIVE_INGREDIENT:
                 label += getString(R.string.active_ingredient);
                 break;
-            case INDUSTRY:
+            case COMPANY:
                 label += getString(R.string.industry);
                 break;
         }
@@ -299,7 +299,7 @@ public class SearchActivity extends BaseActivity implements SearchFragment.Searc
                 case ACTIVE_INGREDIENT:
                     label += " " + getString(R.string.by) + " " + getString(R.string.active_ingredient);
                     break;
-                case INDUSTRY:
+                case COMPANY:
                     label += " " + getString(R.string.by) + " " + getString(R.string.industry);
                     break;
             }

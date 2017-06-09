@@ -18,7 +18,7 @@ import com.andreabardella.aifaservicesconsumer.base.BaseActivity;
 import com.andreabardella.aifaservicesconsumer.base.PresenterStatus;
 import com.andreabardella.aifaservicesconsumer.component.DrugActivityComponent;
 import com.andreabardella.aifaservicesconsumer.model.DrugItem;
-import com.andreabardella.aifaservicesconsumer.model.IndustryLight;
+import com.andreabardella.aifaservicesconsumer.model.CompanyLight;
 import com.andreabardella.aifaservicesconsumer.presenter.DrugActivityPresenter;
 import com.andreabardella.aifaservicesconsumer.util.font.StyleableSpannableStringBuilder;
 
@@ -173,13 +173,13 @@ public class DrugActivity extends BaseActivity {
 
             if (drugItem.getIndustrySet() != null) {
                 StyleableSpannableStringBuilder builder = new StyleableSpannableStringBuilder();
-                for (IndustryLight industry : drugItem.getIndustrySet()) {
+                for (CompanyLight industry : drugItem.getIndustrySet()) {
                     if (builder.toString().length() > 0) {
                         builder.append(", ");
                     }
                     Intent intent = new Intent(this, SearchActivity.class);
                     intent.putExtra(MainActivity.SEARCH_TYPE, SearchType.DRUG);
-                    intent.putExtra(MainActivity.SEARCH_BY, SearchType.INDUSTRY);
+                    intent.putExtra(MainActivity.SEARCH_BY, SearchType.COMPANY);
                     intent.putExtra(MainActivity.SEARCH_TEXT, industry.getName());
                     intent.putExtra(MainActivity.SEARCH_INDUSTRY_CODE, industry.getCode());
                     builder.appendClickableSpanStartActivity(industry.getName(), intent, this, false);

@@ -4,9 +4,9 @@ import android.os.Build;
 import android.text.Html;
 
 import com.andreabardella.aifaservicesconsumer.dto.DrugDto;
+import com.andreabardella.aifaservicesconsumer.model.CompanyLight;
 import com.andreabardella.aifaservicesconsumer.model.DrugItem;
 import com.andreabardella.aifaservicesconsumer.model.DrugStatus;
-import com.andreabardella.aifaservicesconsumer.model.IndustryLight;
 import com.andreabardella.aifaservicesconsumer.model.Packaging;
 import com.andreabardella.aifaservicesconsumer.model.UnrecognizedDrugStatusException;
 
@@ -25,7 +25,7 @@ public class DrugDtoToDrugItemMapper {
             output = new DrugItem();
             List<Packaging> packagingList = new ArrayList<>();
             Set<String> nameSet = new HashSet<>();
-            Set<IndustryLight> industrySet = new HashSet<>();
+            Set<CompanyLight> industrySet = new HashSet<>();
             Set<String> activeIngredientSet = new HashSet<>();
             for (DrugDto input : inputs) {
                 if (input.drugDescriptionList != null) {
@@ -37,7 +37,7 @@ public class DrugDtoToDrugItemMapper {
                 }
                 if (input.industryDescriptionList != null) {
                     for (int i=0; i<input.industryDescriptionList.size(); i++) {
-                        IndustryLight industry = new IndustryLight();
+                        CompanyLight industry = new CompanyLight();
                         String str = decodeHtml(input.industryDescriptionList.get(i));
                         industry.setName(str);
                         if (input.industryCodeList != null && input.industryCodeList.size() > i) {

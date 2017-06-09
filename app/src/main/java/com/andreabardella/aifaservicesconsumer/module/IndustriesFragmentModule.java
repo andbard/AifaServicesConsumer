@@ -19,9 +19,9 @@ public class IndustriesFragmentModule {
     @Named("industries_fragment_dependency")
     static FooBar provideFooBar() {
         if (BuildConfig.FLAVOR.equals("mock")) {
-            return new FooBar(SearchType.INDUSTRY, "lab", "zatta");
+            return new FooBar(SearchType.COMPANY, "lab", "zatta");
         }
-        return new FooBar(SearchType.INDUSTRY, "", "");
+        return new FooBar(SearchType.COMPANY, "", "");
     }
 
     @Provides

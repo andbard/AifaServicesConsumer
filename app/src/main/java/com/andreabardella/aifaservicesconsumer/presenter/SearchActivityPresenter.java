@@ -3,20 +3,13 @@ package com.andreabardella.aifaservicesconsumer.presenter;
 import com.andreabardella.aifaservicesconsumer.FooBar;
 import com.andreabardella.aifaservicesconsumer.SearchType;
 import com.andreabardella.aifaservicesconsumer.api.ApiServicesManager;
-import com.andreabardella.aifaservicesconsumer.api.MockApiManager;
 import com.andreabardella.aifaservicesconsumer.base.BasePresenter;
-import com.andreabardella.aifaservicesconsumer.model.ActiveIngredientLight;
-import com.andreabardella.aifaservicesconsumer.model.DrugLight;
-import com.andreabardella.aifaservicesconsumer.model.IndustryLight;
 import com.andreabardella.aifaservicesconsumer.model.ItemLight;
 
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Set;
 
 import io.reactivex.Observable;
-import io.reactivex.disposables.CompositeDisposable;
-import io.reactivex.schedulers.Schedulers;
 import timber.log.Timber;
 
 public class SearchActivityPresenter extends BasePresenter {
@@ -59,7 +52,7 @@ public class SearchActivityPresenter extends BasePresenter {
 //                return activeIngredientLightObservable = apiServicesManager.getActiveIngredientsByActiveIngredientName(text);
                 observableDotCache = apiServicesManager.getActiveIngredientsByActiveIngredientName(text).cache();
                 break;
-            case INDUSTRY:
+            case COMPANY:
 //                return industryLightObservable = apiServicesManager.getIndustriesByIndustryName(text);
                 observableDotCache = apiServicesManager.getIndustriesByIndustryName(text).cache();
                 break;

@@ -8,11 +8,12 @@ import com.andreabardella.aifaservicesconsumer.dto.ResponseDto;
 import com.andreabardella.aifaservicesconsumer.dto.mapper.DrugDtoToActiveIngredientLightMapper;
 import com.andreabardella.aifaservicesconsumer.dto.mapper.DrugDtoToDrugItemMapper;
 import com.andreabardella.aifaservicesconsumer.dto.mapper.DrugDtoToDrugLightMapper;
-import com.andreabardella.aifaservicesconsumer.dto.mapper.DrugDtoToIndustryLightMapper;
+import com.andreabardella.aifaservicesconsumer.dto.mapper.DrugDtoToCompanyLightMapper;
 import com.andreabardella.aifaservicesconsumer.model.ActiveIngredientLight;
 import com.andreabardella.aifaservicesconsumer.model.DrugItem;
 import com.andreabardella.aifaservicesconsumer.model.DrugLight;
-import com.andreabardella.aifaservicesconsumer.model.IndustryLight;
+import com.andreabardella.aifaservicesconsumer.model.CompanyLight;
+import com.andreabardella.aifaservicesconsumer.module.NetModule;
 import com.andreabardella.aifaservicesconsumer.util.FileUtils;
 
 import java.io.File;
@@ -41,14 +42,14 @@ public class RestApiManager extends BaseApiManager {
 
 
     @Override
-    protected Observable<Set<DrugLight>> getDrugsByBeforeDisposableSetup(String text, SearchType by) { // nimes VS nimes*
+    protected Observable<Set<DrugLight>> getDrugsByBeforeDisposableSetup(String text, SearchType by) {
         Observable<ResponseDto> observable = Observable.just(new ResponseDto());
         if (by == null || by == SearchType.DRUG) {
-            observable = apiServices.getByDrug("bundle:confezione_farmaco+sm_field_descrizione_farmaco:" + text + "*");
+            observable = apiServices.getByDrugName("bundle:confezione_farmaco+sm_field_descrizione_farmaco:" + text + "*");
         } else if (by == SearchType.ACTIVE_INGREDIENT) {
             observable = apiServices.getDrugsByActiveIngredient("bundle:confezione_farmaco+sm_field_descrizione_atc:" + text);
-        } else if (by == SearchType.INDUSTRY) {
-            observable = apiServices.getDrugsByIndustry("bundle:confezione_farmaco+sm_field_codice_ditta:*" + text + "*");
+        } else if (by == SearchType.COMPANY) {
+            observable = apiServices.getDrugsByCompany("bundle:confezione_farmaco+sm_field_codice_ditta:*" + text + "*");
         }
         return observable.map(new Function<ResponseDto, Set<DrugLight>>() {
             @Override
@@ -79,11 +80,11 @@ public class RestApiManager extends BaseApiManager {
     }
 
     @Override
-    protected Observable<Set<IndustryLight>> getIndustriesByIndustryNameBeforeDisposableSetup(String industry) { // *lab* VS lab
-        Observable<ResponseDto> observable = apiServices.getByIndustry("bundle:confezione_farmaco+sm_field_descrizione_ditta:" + industry + "*");
-        return observable.map(new Function<ResponseDto, Set<IndustryLight>>() {
+    protected Observable<Set<CompanyLight>> getIndustriesByIndustryNameBeforeDisposableSetup(String industry) {
+        Observable<ResponseDto> observable = apiServices.getByCompany("bundle:confezione_farmaco+sm_field_descrizione_ditta:" + industry + "*");
+        return observable.map(new Function<ResponseDto, Set<CompanyLight>>() {
             @Override
-            public Set<IndustryLight> apply(@NonNull ResponseDto responseDto) throws Exception {
+            public Set<CompanyLight> apply(@NonNull ResponseDto responseDto) throws Exception {
                 if (responseDto != null && responseDto.response != null) {
                     int numFound = responseDto.response.numFound;
                     int numRetrieved = responseDto.response.drugList != null ? responseDto.response.drugList.size() : -1;
@@ -92,9 +93,9 @@ public class RestApiManager extends BaseApiManager {
                     } else if (numRetrieved == -1) {
                         throw new Exception("null industry list");
                     } else {
-                        Set<IndustryLight> result = new HashSet<>();
+                        Set<CompanyLight> result = new HashSet<>();
                         for (DrugDto dto : responseDto.response.drugList) {
-                            IndustryLight item = DrugDtoToIndustryLightMapper.map(dto);
+                            CompanyLight item = DrugDtoToCompanyLightMapper.map(dto);
                             if (item != null && !result.contains(item)) {
                                 result.add(item);
                             }
@@ -108,7 +109,7 @@ public class RestApiManager extends BaseApiManager {
     }
 
     @Override
-    protected Observable<Set<ActiveIngredientLight>> getActiveIngredientsByActiveIngredientNameBeforeDisposableSetup(String activeIngredient) { // parac* VS parac
+    protected Observable<Set<ActiveIngredientLight>> getActiveIngredientsByActiveIngredientNameBeforeDisposableSetup(String activeIngredient) {
         Observable<ResponseDto> observable = apiServices.getByActiveIngredient("bundle:confezione_farmaco+sm_field_descrizione_atc:" + activeIngredient + "*");
         return observable.map(new Function<ResponseDto, Set<ActiveIngredientLight>>() {
             @Override
@@ -164,7 +165,7 @@ public class RestApiManager extends BaseApiManager {
         if (arr.length > 1) {
             String partialUrl = arr[1];
             String[] array = parseUrlFromPdfFileName(partialUrl);
-            Observable<Response<Void>> observable = apiServices.headFi(docsBaseUrl, array[0], array[1], array[2]); // footer_001392_042692_FI.pdf&retry=0&sys=m0b1l3
+            Observable<Response<Void>> observable = apiServices.headFi(NetModule.DOCS_URL, array[0], array[1], array[2]); // footer_001392_042692_FI.pdf&retry=0&sys=m0b1l3
             return observable.map(new Function<Response<Void>, Integer>() {
                 @Override
                 public Integer apply(@NonNull Response<Void> voidResponse) throws Exception {
@@ -187,7 +188,7 @@ public class RestApiManager extends BaseApiManager {
         if (arr.length > 1) {
             String partialUrl = arr[1];
             String[] array = parseUrlFromPdfFileName(partialUrl);
-            Observable<Response<Void>> observable = apiServices.headRcp(docsBaseUrl, array[0], array[1], array[2]); // footer_001392_042692_RCP.pdf&retry=0&sys=m0b1l3
+            Observable<Response<Void>> observable = apiServices.headRcp(NetModule.DOCS_URL, array[0], array[1], array[2]); // footer_001392_042692_RCP.pdf&retry=0&sys=m0b1l3
             return observable.map(new Function<Response<Void>, Integer>() {
                 @Override
                 public Integer apply(@NonNull Response<Void> voidResponse) throws Exception {
@@ -210,11 +211,11 @@ public class RestApiManager extends BaseApiManager {
         if (arr.length > 1) {
             String partialUrl = arr[1];
             final String[] array = parseUrlFromPdfFileName(partialUrl);
-            Observable<ResponseBody> observable = apiServices.getFi(docsBaseUrl, array[0], array[1], array[2]); // footer_001392_042692_FI.pdf&retry=0&sys=m0b1l3
+            Observable<ResponseBody> observable = apiServices.getFi(NetModule.DOCS_URL, array[0], array[1], array[2]); // footer_001392_042692_FI.pdf&retry=0&sys=m0b1l3
             return observable.map(new Function<ResponseBody, File>() {
                 @Override
                 public File apply(@NonNull ResponseBody responseBody) throws Exception {
-                    File dir = new File(context.getCacheDir(), "documents");
+                    File dir = new File(context.getCacheDir(), "documents"); // see file_provider_paths.xml
                     if (!dir.isDirectory()) {
                         dir.mkdirs();
                     }
@@ -240,11 +241,11 @@ public class RestApiManager extends BaseApiManager {
         if (arr.length > 1) {
             String partialUrl = arr[1];
             final String[] array = parseUrlFromPdfFileName(partialUrl);
-            Observable<ResponseBody> observable = apiServices.getRcp(docsBaseUrl, array[0], array[1], array[2]); // footer_001392_042692_RCP.pdf&retry=0&sys=m0b1l3
+            Observable<ResponseBody> observable = apiServices.getRcp(NetModule.DOCS_URL, array[0], array[1], array[2]); // footer_001392_042692_RCP.pdf&retry=0&sys=m0b1l3
             return observable.map(new Function<ResponseBody, File>() {
                 @Override
                 public File apply(@NonNull ResponseBody responseBody) throws Exception {
-                    File dir = new File(context.getCacheDir(), "documents");
+                    File dir = new File(context.getCacheDir(), "documents"); // see file_provider_paths.xml
                     if (!dir.isDirectory()) {
                         dir.mkdirs();
                     }
@@ -282,9 +283,6 @@ public class RestApiManager extends BaseApiManager {
                     break;
             }
         }
-        String[] result = new String[] {name, retry, sys};
-        return result;
+        return new String[] {name, retry, sys};
     }
-
-    private static final String docsBaseUrl = "https://farmaci.agenziafarmaco.gov.it/aifa/servlet/PdfDownloadServlet";
 }

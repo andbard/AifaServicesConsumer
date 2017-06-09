@@ -11,8 +11,8 @@ import android.widget.TextView;
 import com.andreabardella.aifaservicesconsumer.R;
 import com.andreabardella.aifaservicesconsumer.SearchType;
 import com.andreabardella.aifaservicesconsumer.model.ActiveIngredientLight;
+import com.andreabardella.aifaservicesconsumer.model.CompanyLight;
 import com.andreabardella.aifaservicesconsumer.model.DrugLight;
-import com.andreabardella.aifaservicesconsumer.model.IndustryLight;
 import com.andreabardella.aifaservicesconsumer.model.ItemLight;
 
 import java.util.ArrayList;
@@ -21,7 +21,6 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import timber.log.Timber;
 
 public class ItemLightAdapter extends RecyclerView.Adapter<ItemLightAdapter.ViewHolder> implements Filterable {
 
@@ -133,8 +132,8 @@ public class ItemLightAdapter extends RecyclerView.Adapter<ItemLightAdapter.View
             return SearchType.DRUG.getId();
         } else if (items.get(pos) instanceof ActiveIngredientLight) {
             return SearchType.ACTIVE_INGREDIENT.getId();
-        } else if (items.get(pos) instanceof IndustryLight) {
-            return SearchType.INDUSTRY.getId();
+        } else if (items.get(pos) instanceof CompanyLight) {
+            return SearchType.COMPANY.getId();
         } else {
             return 0;
         }
@@ -149,7 +148,7 @@ public class ItemLightAdapter extends RecyclerView.Adapter<ItemLightAdapter.View
         } else if (viewType == SearchType.DRUG.getId()) {
             view = LayoutInflater.from(parent.getContext()).inflate(R.layout.drug_list_item, parent, false);
             return new ItemLightAdapter.DrugViewHolder(view);
-        } else if (viewType == SearchType.INDUSTRY.getId()) {
+        } else if (viewType == SearchType.COMPANY.getId()) {
             view = LayoutInflater.from(parent.getContext()).inflate(R.layout.indutry_list_item, parent, false);
             return new ItemLightAdapter.IndustryViewHolder(view);
         } else {
@@ -169,8 +168,8 @@ public class ItemLightAdapter extends RecyclerView.Adapter<ItemLightAdapter.View
         } else if (getItemViewType(pos) == SearchType.ACTIVE_INGREDIENT.getId()) {
             ActiveIngredientLight activeIngredient = (ActiveIngredientLight) item;
             ((ActiveIngredientViewHolder) viewHolder).activeIngredient.setText(activeIngredient.getName());
-        } else if (getItemViewType(pos) == SearchType.INDUSTRY.getId()) {
-            IndustryLight industry = (IndustryLight) item;
+        } else if (getItemViewType(pos) == SearchType.COMPANY.getId()) {
+            CompanyLight industry = (CompanyLight) item;
             ((IndustryViewHolder) viewHolder).industry.setText(industry.getName());
         }
     }
