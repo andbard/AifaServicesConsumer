@@ -91,7 +91,7 @@ public class DrugDtoToDrugItemMapper {
             output.setFiUrl(inputs.get(0).linkFiList.get(0));
             output.setRcpUrl(inputs.get(0).linkRcpList.get(0));
             output.setNameSet(nameSet);
-            output.setIndustrySet(industrySet);
+            output.setCompanySet(industrySet);
             output.setActiveIngredientSet(activeIngredientSet);
             output.setPackagingList(packagingList);
         }

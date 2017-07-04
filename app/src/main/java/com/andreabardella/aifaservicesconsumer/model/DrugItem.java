@@ -11,7 +11,7 @@ import java.util.Set;
 public class DrugItem implements Parcelable {
 
     private Set<String> nameSet;
-    private Set<CompanyLight> industrySet;
+    private Set<CompanyLight> companySet;
     private String aic;
     private Set<String> activeIngredientSet;
     private String fiUrl;
@@ -32,12 +32,12 @@ public class DrugItem implements Parcelable {
         this.nameSet = nameList;
     }
 
-    public Set<CompanyLight> getIndustrySet() {
-        return industrySet;
+    public Set<CompanyLight> getCompanySet() {
+        return companySet;
     }
 
-    public void setIndustrySet(Set<CompanyLight> industryList) {
-        this.industrySet = industryList;
+    public void setCompanySet(Set<CompanyLight> industryList) {
+        this.companySet = industryList;
     }
 
     public String getAic() {
@@ -131,9 +131,9 @@ public class DrugItem implements Parcelable {
             }
         }
 
-        dest.writeInt(industrySet != null ? industrySet.size() : -1);
-        if (industrySet != null) {
-            for (CompanyLight industry : industrySet) {
+        dest.writeInt(companySet != null ? companySet.size() : -1);
+        if (companySet != null) {
+            for (CompanyLight industry : companySet) {
                 dest.writeValue(industry);
             }
         }
@@ -179,7 +179,7 @@ public class DrugItem implements Parcelable {
             for (int i=0; i<size; i++) {
                 set.add((CompanyLight) source.readValue(CompanyLight.class.getClassLoader()));
             }
-            this.setIndustrySet(set);
+            this.setCompanySet(set);
         }
 
         this.setAic(source.readString());

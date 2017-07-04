@@ -171,18 +171,18 @@ public class DrugActivity extends BaseActivity {
 
             aicTv.setText(drugItem.getAic());
 
-            if (drugItem.getIndustrySet() != null) {
+            if (drugItem.getCompanySet() != null) {
                 StyleableSpannableStringBuilder builder = new StyleableSpannableStringBuilder();
-                for (CompanyLight industry : drugItem.getIndustrySet()) {
+                for (CompanyLight company : drugItem.getCompanySet()) {
                     if (builder.toString().length() > 0) {
                         builder.append(", ");
                     }
                     Intent intent = new Intent(this, SearchActivity.class);
                     intent.putExtra(MainActivity.SEARCH_TYPE, SearchType.DRUG);
                     intent.putExtra(MainActivity.SEARCH_BY, SearchType.COMPANY);
-                    intent.putExtra(MainActivity.SEARCH_TEXT, industry.getName());
-                    intent.putExtra(MainActivity.SEARCH_INDUSTRY_CODE, industry.getCode());
-                    builder.appendClickableSpanStartActivity(industry.getName(), intent, this, false);
+                    intent.putExtra(MainActivity.SEARCH_TEXT, company.getName());
+                    intent.putExtra(MainActivity.SEARCH_INDUSTRY_CODE, company.getCode());
+                    builder.appendClickableSpanStartActivity(company.getName(), intent, this, false);
                 }
                 industryTv.setText(builder, TextView.BufferType.SPANNABLE);
                 industryTv.setMovementMethod(LinkMovementMethod.getInstance());
@@ -217,9 +217,9 @@ public class DrugActivity extends BaseActivity {
         }
     }
 
-    private void getDrugByAic(final String aic) {
+    private void getDrugByAic(final String aic, final boolean refreshCache) {
         final int requestId = DrugActivityPresenter.DRUG_ITEM;
-        presenter.getDrugByAic(aic, false)
+        presenter.getDrugByAic(aic, refreshCache)
                 .compose(applyChain(requestId))
                 .subscribe(new Observer<Object>() {
                     @Override
@@ -230,8 +230,8 @@ public class DrugActivity extends BaseActivity {
                     @Override
                     public void onNext(@NonNull Object o) {
                         drugItem = (DrugItem) o;
-                        getFiSize(drugItem.getFiUrl());
-                        getRcpSize(drugItem.getRcpUrl());
+                        getFiSize(drugItem.getFiUrl(), refreshCache);
+                        getRcpSize(drugItem.getRcpUrl(), refreshCache);
                     }
 
                     @Override
@@ -248,9 +248,9 @@ public class DrugActivity extends BaseActivity {
                 });
     }
 
-    private void getFiSize(final String url) {
+    private void getFiSize(final String url, final boolean refreshCache) {
         final int requestId = DrugActivityPresenter.FI_SIZE;
-        presenter.getFiSize(drugItem.getFiUrl(), false)
+        presenter.getFiSize(url, refreshCache)
                 .compose(applyChain(requestId))
                 .subscribe(new Observer<Object>() {
                     @Override
@@ -278,9 +278,9 @@ public class DrugActivity extends BaseActivity {
                 });
     }
 
-    private void getRcpSize(final String url) {
+    private void getRcpSize(final String url, final boolean refreshCache) {
         final int requestId = DrugActivityPresenter.RCP_SIZE;
-        presenter.getRcpSize(drugItem.getRcpUrl(), false)
+        presenter.getRcpSize(url, refreshCache)
                 .compose(applyChain(requestId))
                 .subscribe(new Observer<Object>() {
                     @Override
@@ -385,21 +385,18 @@ public class DrugActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        if (isGetDrugItemInProgress) {
+        if (isGetDrugItemInProgress || performDrugItemSearchOnResume) {
             onGetDrugItemInProgress();
-            getDrugByAic(aic);
-        } else if (performDrugItemSearchOnResume) {
-            onGetDrugItemInProgress();
-            getDrugByAic(aic);
+            getDrugByAic(aic, performDrugItemSearchOnResume);
             performDrugItemSearchOnResume = false;
         }
         if (isGetFiSizeInProgress) {
             onGetFiSizeInProgress();
-            getFiSize(drugItem.getFiUrl());
+            getFiSize(drugItem.getFiUrl(), false);
         }
         if (isGetRcpSizeInProgress) {
             onGetRcpSizeInProgress();
-            getRcpSize(drugItem.getRcpUrl());
+            getRcpSize(drugItem.getRcpUrl(), false);
         }
         if (isGetFiInProgress) {
             onGetFiInProgress();
