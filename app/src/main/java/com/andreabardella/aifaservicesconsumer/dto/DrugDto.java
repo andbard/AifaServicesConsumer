@@ -140,10 +140,10 @@ public class DrugDto {
     public Date dsLastCommentOrChange; // "2014-07-08T16:49:23Z"
 
     @JsonProperty(SM_FIELD_CODICE_DITTA)
-    public List<String> industryCodeList; // ["2999"]
+    public List<String> companyCodeList; // ["2999"]
 
     @JsonProperty(SM_FIELD_DESCRIZIONE_DITTA)
-    public List<String> industryDescriptionList; // ["ACTAVIS GROUP PTC EHF"]
+    public List<String> companyDescriptionList; // ["ACTAVIS GROUP PTC EHF"]
 
     @JsonProperty(SM_FIELD_CODICE_FARMACO)
     public List<String> drugCodeList; // ["028510"]

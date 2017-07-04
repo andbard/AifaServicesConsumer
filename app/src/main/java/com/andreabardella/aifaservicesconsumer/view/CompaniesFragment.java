@@ -2,19 +2,19 @@ package com.andreabardella.aifaservicesconsumer.view;
 
 import android.os.Bundle;
 
-import com.andreabardella.aifaservicesconsumer.component.IndustriesFragmentComponent;
-import com.andreabardella.aifaservicesconsumer.presenter.IndustriesFragmentPresenter;
+import com.andreabardella.aifaservicesconsumer.component.CompaniesFragmentComponent;
+import com.andreabardella.aifaservicesconsumer.presenter.CompaniesFragmentPresenter;
 
 import javax.inject.Inject;
 
-public class IndustriesFragment extends SearchFragment {
+public class CompaniesFragment extends SearchFragment {
 
     @Inject
-    IndustriesFragmentPresenter presenter;
+    CompaniesFragmentPresenter presenter;
 
     @Override
-    protected Class<IndustriesFragmentComponent> getComponentClass() {
-        return IndustriesFragmentComponent.class;
+    protected Class<CompaniesFragmentComponent> getComponentClass() {
+        return CompaniesFragmentComponent.class;
     }
 
     @Override
@@ -23,7 +23,7 @@ public class IndustriesFragment extends SearchFragment {
     }
 
     @Override
-    protected IndustriesFragmentPresenter getBasePresenter() {
+    protected CompaniesFragmentPresenter getBasePresenter() {
         return presenter;
     }
 

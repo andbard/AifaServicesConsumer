@@ -80,8 +80,8 @@ public class RestApiManager extends BaseApiManager {
     }
 
     @Override
-    protected Observable<Set<CompanyLight>> getIndustriesByIndustryNameBeforeDisposableSetup(String industry) {
-        Observable<ResponseDto> observable = apiServices.getByCompany("bundle:confezione_farmaco+sm_field_descrizione_ditta:" + industry + "*");
+    protected Observable<Set<CompanyLight>> getCompaniesByCompanyNameBeforeDisposableSetup(String company) {
+        Observable<ResponseDto> observable = apiServices.getByCompany("bundle:confezione_farmaco+sm_field_descrizione_ditta:" + company + "*");
         return observable.map(new Function<ResponseDto, Set<CompanyLight>>() {
             @Override
             public Set<CompanyLight> apply(@NonNull ResponseDto responseDto) throws Exception {
@@ -91,7 +91,7 @@ public class RestApiManager extends BaseApiManager {
                     if (numFound == 0) {
                         return new HashSet<>();
                     } else if (numRetrieved == -1) {
-                        throw new Exception("null industry list");
+                        throw new Exception("null company list");
                     } else {
                         Set<CompanyLight> result = new HashSet<>();
                         for (DrugDto dto : responseDto.response.drugList) {

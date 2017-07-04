@@ -50,7 +50,7 @@ public class SearchActivity extends BaseActivity implements SearchFragment.Searc
 
     private SearchType type;
     private SearchType by;
-    private String industryCode;
+    private String companyCode;
     private boolean performSearchOnResume = false;
 
     @Inject
@@ -77,7 +77,7 @@ public class SearchActivity extends BaseActivity implements SearchFragment.Searc
         setActivityTitle(type, by);
 
         if (by == SearchType.COMPANY) {
-            industryCode = intent.getStringExtra(MainActivity.SEARCH_INDUSTRY_CODE);
+            companyCode = intent.getStringExtra(MainActivity.SEARCH_COMPANY_CODE);
         }
 
         String text = intent.getStringExtra(MainActivity.SEARCH_TEXT);
@@ -103,7 +103,7 @@ public class SearchActivity extends BaseActivity implements SearchFragment.Searc
             by = (SearchType) incomingIntent.getSerializableExtra(MainActivity.SEARCH_BY);
 
             if (by == SearchType.COMPANY) {
-                industryCode = incomingIntent.getStringExtra(MainActivity.SEARCH_INDUSTRY_CODE);
+                companyCode = incomingIntent.getStringExtra(MainActivity.SEARCH_COMPANY_CODE);
             }
 
             String text = incomingIntent.getStringExtra(MainActivity.SEARCH_TEXT);
@@ -116,7 +116,7 @@ public class SearchActivity extends BaseActivity implements SearchFragment.Searc
                     fragment = new DrugsFragment();
                     break;
                 case COMPANY:
-                    fragment = new IndustriesFragment();
+                    fragment = new CompaniesFragment();
                     break;
                 case ACTIVE_INGREDIENT:
                     fragment = new ActiveIngredientsFragment();
@@ -131,7 +131,7 @@ public class SearchActivity extends BaseActivity implements SearchFragment.Searc
             items = savedInstanceState.getParcelableArrayList("items");
             type = (SearchType) savedInstanceState.getSerializable(MainActivity.SEARCH_TYPE);
             by = (SearchType) savedInstanceState.getSerializable(MainActivity.SEARCH_BY);
-            industryCode = savedInstanceState.getString(MainActivity.SEARCH_INDUSTRY_CODE);
+            companyCode = savedInstanceState.getString(MainActivity.SEARCH_COMPANY_CODE);
         }
 
         if (by != null && by != SearchType.DRUG) {
@@ -207,7 +207,7 @@ public class SearchActivity extends BaseActivity implements SearchFragment.Searc
             if (performSearchOnResume) {
                 performSearchOnResume = false;
                 if (by != null && by == SearchType.COMPANY) {
-                    search(industryCode, type, by, true);
+                    search(companyCode, type, by, true);
                 } else {
                     search(searchEt.getText().toString(), type, by, true);
                 }
@@ -273,7 +273,7 @@ public class SearchActivity extends BaseActivity implements SearchFragment.Searc
         super.onSaveInstanceState(outState);
         outState.putSerializable(MainActivity.SEARCH_TYPE, type);
         outState.putSerializable(MainActivity.SEARCH_BY, by);
-        outState.putString(MainActivity.SEARCH_INDUSTRY_CODE, industryCode);
+        outState.putString(MainActivity.SEARCH_COMPANY_CODE, companyCode);
         outState.putBoolean("isSearchInProgress", isSearchInProgress);
         outState.putParcelableArrayList("items", items);
     }
@@ -288,7 +288,7 @@ public class SearchActivity extends BaseActivity implements SearchFragment.Searc
                 label += getString(R.string.active_ingredient);
                 break;
             case COMPANY:
-                label += getString(R.string.industry);
+                label += getString(R.string.company);
                 break;
         }
         if (by != null) {
@@ -300,7 +300,7 @@ public class SearchActivity extends BaseActivity implements SearchFragment.Searc
                     label += " " + getString(R.string.by) + " " + getString(R.string.active_ingredient);
                     break;
                 case COMPANY:
-                    label += " " + getString(R.string.by) + " " + getString(R.string.industry);
+                    label += " " + getString(R.string.by) + " " + getString(R.string.company);
                     break;
             }
         }
@@ -339,13 +339,13 @@ public class SearchActivity extends BaseActivity implements SearchFragment.Searc
     }
 
     @Override
-    public void onSearchDrugsBy(String text, SearchType by, String industryCode) {
+    public void onSearchDrugsBy(String text, SearchType by, String companyCode) {
         // n.b.: since this activity is singleTop no new instance should be created an onNewIntent() should be fired
         Intent intent = new Intent(this, SearchActivity.class);
         intent.putExtra(MainActivity.SEARCH_TEXT, text);
         intent.putExtra(MainActivity.SEARCH_TYPE, SearchType.DRUG);
         intent.putExtra(MainActivity.SEARCH_BY, by);
-        intent.putExtra(MainActivity.SEARCH_INDUSTRY_CODE, industryCode);
+        intent.putExtra(MainActivity.SEARCH_COMPANY_CODE, companyCode);
         startActivity(intent);
     }
 

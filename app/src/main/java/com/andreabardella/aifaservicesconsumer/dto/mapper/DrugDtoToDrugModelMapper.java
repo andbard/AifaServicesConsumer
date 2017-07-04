@@ -39,8 +39,8 @@ public class DrugDtoToDrugModelMapper {
             output.setDsCreated(input.dsCreated);
             output.setDsChanged(input.dsChanged);
             output.setDsLastCommentOrChange(input.dsLastCommentOrChange);
-            output.setIndustryCodeList(input.industryCodeList);
-            output.setIndustryDescriptionList(input.industryDescriptionList);
+            output.setCompanyCodeList(input.companyCodeList);
+            output.setCompanyDescriptionList(input.companyDescriptionList);
             output.setDrugCodeList(input.drugCodeList);
             output.setDrugDescriptionList(input.drugDescriptionList);
             output.setDrugStateList(input.drugStateList);

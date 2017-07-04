@@ -29,7 +29,7 @@ public abstract class SearchFragment extends BaseFragment implements ItemLightAd
 
     public interface SearchListener {
         void onUpdateSearchHint(String hint);
-        void onSearchDrugsBy(String text, SearchType by, String industryCode);
+        void onSearchDrugsBy(String text, SearchType by, String companyCode);
         void onSearchDrugByAic(String aic);
     }
 
@@ -140,7 +140,7 @@ public abstract class SearchFragment extends BaseFragment implements ItemLightAd
     public void onItemClick(ItemLight item) {
 //        String str;
 //        if (item instanceof DrugLight) {
-//            str = "item -> {code:" + item.getCode() + ", name:" + item.getName() + ", industry:" + ((DrugLight) item).getIndustry() + "}";
+//            str = "item -> {code:" + item.getCode() + ", name:" + item.getName() + ", company:" + ((DrugLight) item).getCompany() + "}";
 //        } else {
 //            str = "item -> {code:" + item.getCode() + ", name:" + item.getName() + "}";
 //        }

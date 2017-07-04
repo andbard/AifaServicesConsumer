@@ -4,7 +4,7 @@ import com.andreabardella.aifaservicesconsumer.base.SubComponentBuilder;
 import com.andreabardella.aifaservicesconsumer.base.SubComponentKey;
 import com.andreabardella.aifaservicesconsumer.component.ActiveIngredientsFragmentComponent;
 import com.andreabardella.aifaservicesconsumer.component.DrugsFragmentComponent;
-import com.andreabardella.aifaservicesconsumer.component.IndustriesFragmentComponent;
+import com.andreabardella.aifaservicesconsumer.component.CompaniesFragmentComponent;
 
 import dagger.Binds;
 import dagger.Module;
@@ -12,7 +12,7 @@ import dagger.multibindings.IntoMap;
 
 @Module(subcomponents = {
         ActiveIngredientsFragmentComponent.class,
-        IndustriesFragmentComponent.class,
+        CompaniesFragmentComponent.class,
         DrugsFragmentComponent.class
 })
 public abstract class SearchFragmentsBindingModule {
@@ -24,8 +24,8 @@ public abstract class SearchFragmentsBindingModule {
 
     @Binds
     @IntoMap
-    @SubComponentKey(IndustriesFragmentComponent.class)
-    public abstract SubComponentBuilder industriesFragmentComponentBuilder(IndustriesFragmentComponent.Builder impl);
+    @SubComponentKey(CompaniesFragmentComponent.class)
+    public abstract SubComponentBuilder companiesFragmentComponentBuilder(CompaniesFragmentComponent.Builder impl);
 
     @Binds
     @IntoMap

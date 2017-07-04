@@ -63,8 +63,8 @@ public class MockApiManager extends BaseApiManager {
     }
 
     @Override
-    protected Observable<Set<CompanyLight>> getIndustriesByIndustryNameBeforeDisposableSetup(String industry) {
-        return getItemLightSet(industry, SearchType.COMPANY, null)
+    protected Observable<Set<CompanyLight>> getCompaniesByCompanyNameBeforeDisposableSetup(String company) {
+        return getItemLightSet(company, SearchType.COMPANY, null)
                 .map(new Function<Set<? extends ItemLight>, Set<CompanyLight>>() {
                     @Override
                     public Set<CompanyLight> apply(@NonNull Set<? extends ItemLight> itemLightSet) throws Exception {

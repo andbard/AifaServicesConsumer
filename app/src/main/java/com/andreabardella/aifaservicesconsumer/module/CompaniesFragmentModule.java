@@ -4,7 +4,7 @@ import com.andreabardella.aifaservicesconsumer.BuildConfig;
 import com.andreabardella.aifaservicesconsumer.FooBar;
 import com.andreabardella.aifaservicesconsumer.SearchType;
 import com.andreabardella.aifaservicesconsumer.base.scope.FragmentScope;
-import com.andreabardella.aifaservicesconsumer.presenter.IndustriesFragmentPresenter;
+import com.andreabardella.aifaservicesconsumer.presenter.CompaniesFragmentPresenter;
 
 import javax.inject.Named;
 
@@ -12,11 +12,11 @@ import dagger.Module;
 import dagger.Provides;
 
 @Module
-public class IndustriesFragmentModule {
+public class CompaniesFragmentModule {
 
     @Provides
     @FragmentScope
-    @Named("industries_fragment_dependency")
+    @Named("companies_fragment_dependency")
     static FooBar provideFooBar() {
         if (BuildConfig.FLAVOR.equals("mock")) {
             return new FooBar(SearchType.COMPANY, "lab", "zatta");
@@ -26,7 +26,7 @@ public class IndustriesFragmentModule {
 
     @Provides
     @FragmentScope
-    static IndustriesFragmentPresenter provideIndustriesFragmentPresenter(@Named("industries_fragment_dependency") FooBar fooBar) {
-        return new IndustriesFragmentPresenter(fooBar);
+    static CompaniesFragmentPresenter provideCompaniesFragmentPresenter(@Named("companies_fragment_dependency") FooBar fooBar) {
+        return new CompaniesFragmentPresenter(fooBar);
     }
 }

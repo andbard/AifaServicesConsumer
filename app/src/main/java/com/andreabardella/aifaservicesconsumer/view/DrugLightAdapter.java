@@ -23,8 +23,8 @@ public class DrugLightAdapter extends RecyclerView.Adapter<DrugLightAdapter.View
         TextView drug;
         @BindView(R.id.drug_list_item_aic_tv)
         TextView aic;
-        @BindView(R.id.drug_list_item_industry_tv)
-        TextView industry;
+        @BindView(R.id.drug_list_item_company_tv)
+        TextView company;
 
         public ViewHolder(View view) {
             super(view);
@@ -47,7 +47,7 @@ public class DrugLightAdapter extends RecyclerView.Adapter<DrugLightAdapter.View
         DrugLight item = (DrugLight) (items.toArray())[pos];
         viewHolder.drug.setText(item.getName());
         viewHolder.aic.setText(item.getCode());
-        viewHolder.industry.setText(item.getIndustry());
+        viewHolder.company.setText(item.getCompany());
     }
 
     @Override

@@ -31,8 +31,8 @@ public class Drug {
     private Date dsCreated;
     private Date dsChanged;
     private Date dsLastCommentOrChange;
-    private List<String> industryCodeList;
-    private List<String> industryDescriptionList;
+    private List<String> companyCodeList;
+    private List<String> companyDescriptionList;
     private List<String> drugCodeList;
     private List<String> drugDescriptionList;
     private List<String> bundleCodeList;
@@ -257,20 +257,20 @@ public class Drug {
         this.dsLastCommentOrChange = dsLastCommentOrChange;
     }
 
-    public List<String> getIndustryCodeList() {
-        return industryCodeList;
+    public List<String> getCompanyCodeList() {
+        return companyCodeList;
     }
 
-    public void setIndustryCodeList(List<String> industryCodeList) {
-        this.industryCodeList = industryCodeList;
+    public void setCompanyCodeList(List<String> companyCodeList) {
+        this.companyCodeList = companyCodeList;
     }
 
-    public List<String> getIndustryDescriptionList() {
-        return industryDescriptionList;
+    public List<String> getCompanyDescriptionList() {
+        return companyDescriptionList;
     }
 
-    public void setIndustryDescriptionList(List<String> industryDescriptionList) {
-        this.industryDescriptionList = industryDescriptionList;
+    public void setCompanyDescriptionList(List<String> companyDescriptionList) {
+        this.companyDescriptionList = companyDescriptionList;
     }
 
     public List<String> getDrugCodeList() {

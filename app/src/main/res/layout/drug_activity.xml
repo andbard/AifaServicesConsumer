@@ -66,11 +66,11 @@
                     android:textSize="18sp"/>
             </LinearLayout>
             <TextView
-                android:id="@+id/drug_activity_industry_tv"
+                android:id="@+id/drug_activity_company_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:hint="Industry"
+                android:hint="Company"
                 android:textSize="18sp"
                 android:clickable="true"/>
             <TextView

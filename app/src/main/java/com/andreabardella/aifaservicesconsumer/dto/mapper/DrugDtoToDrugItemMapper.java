@@ -25,7 +25,7 @@ public class DrugDtoToDrugItemMapper {
             output = new DrugItem();
             List<Packaging> packagingList = new ArrayList<>();
             Set<String> nameSet = new HashSet<>();
-            Set<CompanyLight> industrySet = new HashSet<>();
+            Set<CompanyLight> companySet = new HashSet<>();
             Set<String> activeIngredientSet = new HashSet<>();
             for (DrugDto input : inputs) {
                 if (input.drugDescriptionList != null) {
@@ -35,16 +35,16 @@ public class DrugDtoToDrugItemMapper {
                         }
                     }
                 }
-                if (input.industryDescriptionList != null) {
-                    for (int i=0; i<input.industryDescriptionList.size(); i++) {
-                        CompanyLight industry = new CompanyLight();
-                        String str = decodeHtml(input.industryDescriptionList.get(i));
-                        industry.setName(str);
-                        if (input.industryCodeList != null && input.industryCodeList.size() > i) {
-                            industry.setCode(input.industryCodeList.get(i));
+                if (input.companyDescriptionList != null) {
+                    for (int i = 0; i<input.companyDescriptionList.size(); i++) {
+                        CompanyLight company = new CompanyLight();
+                        String str = decodeHtml(input.companyDescriptionList.get(i));
+                        company.setName(str);
+                        if (input.companyCodeList != null && input.companyCodeList.size() > i) {
+                            company.setCode(input.companyCodeList.get(i));
                         }
-                        if (!industrySet.contains(industry)) {
-                            industrySet.add(industry);
+                        if (!companySet.contains(company)) {
+                            companySet.add(company);
                         }
                     }
                 }
@@ -91,7 +91,7 @@ public class DrugDtoToDrugItemMapper {
             output.setFiUrl(inputs.get(0).linkFiList.get(0));
             output.setRcpUrl(inputs.get(0).linkRcpList.get(0));
             output.setNameSet(nameSet);
-            output.setCompanySet(industrySet);
+            output.setCompanySet(companySet);
             output.setActiveIngredientSet(activeIngredientSet);
             output.setPackagingList(packagingList);
         }

@@ -44,9 +44,9 @@ public interface ApiServicesManager {
 
     void cancelGetProductCharacteristicsSummary();
 
-    Observable<Set<CompanyLight>> getIndustriesByIndustryName(String industry);
+    Observable<Set<CompanyLight>> getCompaniesByCompanyName(String company);
 
-    void cancelGetIndustriesByIndustryName();
+    void cancelGetCompaniesByCompanyName();
 
     /**/
     void cancelPendingRequests();

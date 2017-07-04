@@ -36,8 +36,8 @@ public class DrugItem implements Parcelable {
         return companySet;
     }
 
-    public void setCompanySet(Set<CompanyLight> industryList) {
-        this.companySet = industryList;
+    public void setCompanySet(Set<CompanyLight> companySet) {
+        this.companySet = companySet;
     }
 
     public String getAic() {
@@ -133,8 +133,8 @@ public class DrugItem implements Parcelable {
 
         dest.writeInt(companySet != null ? companySet.size() : -1);
         if (companySet != null) {
-            for (CompanyLight industry : companySet) {
-                dest.writeValue(industry);
+            for (CompanyLight company : companySet) {
+                dest.writeValue(company);
             }
         }
 

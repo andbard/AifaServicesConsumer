@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String SEARCH_TYPE = "SEARCH_TYPE";
     public static final String SEARCH_BY = "SEARCH_BY";
     public static final String SEARCH_TEXT = "SEARCH_TEXT";
-    public static final String SEARCH_INDUSTRY_CODE = "SEARCH_INDUSTRY_CODE";
+    public static final String SEARCH_COMPANY_CODE = "SEARCH_COMPANY_CODE";
 
     @OnClick(R.id.main_activity_search_by_barcode)
     void searchByBarcode() {
@@ -42,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
     void searchByActiveIngredient() {
         searchBy(SearchType.ACTIVE_INGREDIENT, null);
     }
-    @OnClick(R.id.main_activity_search_by_industry)
-    void searchByIndustry() {
+    @OnClick(R.id.main_activity_search_by_company)
+    void searchByCompany() {
         searchBy(SearchType.COMPANY, null);
     }
 

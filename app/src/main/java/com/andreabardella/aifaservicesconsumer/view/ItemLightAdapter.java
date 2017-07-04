@@ -86,14 +86,14 @@ public class ItemLightAdapter extends RecyclerView.Adapter<ItemLightAdapter.View
         }
     }
 
-    static class IndustryViewHolder extends ViewHolder {
-        @BindView(R.id.industry_list_item_tv)
-        TextView industry;
-        IndustryViewHolder(View view) {
+    static class CompanyViewHolder extends ViewHolder {
+        @BindView(R.id.company_list_item_tv)
+        TextView company;
+        CompanyViewHolder(View view) {
             super(view);
             ButterKnife.bind(this, view);
 
-            industry.setOnClickListener(new View.OnClickListener() {
+            company.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     listener.onItemClick(getItem());
@@ -109,8 +109,8 @@ public class ItemLightAdapter extends RecyclerView.Adapter<ItemLightAdapter.View
         TextView drug;
         @BindView(R.id.drug_list_item_aic_tv)
         TextView aic;
-        @BindView(R.id.drug_list_item_industry_tv)
-        TextView industry;
+        @BindView(R.id.drug_list_item_company_tv)
+        TextView company;
         DrugViewHolder(View view) {
             super(view);
             ButterKnife.bind(this, view);
@@ -150,7 +150,7 @@ public class ItemLightAdapter extends RecyclerView.Adapter<ItemLightAdapter.View
             return new ItemLightAdapter.DrugViewHolder(view);
         } else if (viewType == SearchType.COMPANY.getId()) {
             view = LayoutInflater.from(parent.getContext()).inflate(R.layout.indutry_list_item, parent, false);
-            return new ItemLightAdapter.IndustryViewHolder(view);
+            return new CompanyViewHolder(view);
         } else {
             return null;
         }
@@ -164,13 +164,13 @@ public class ItemLightAdapter extends RecyclerView.Adapter<ItemLightAdapter.View
             DrugLight drug = (DrugLight) item;
             ((DrugViewHolder) viewHolder).drug.setText(drug.getName());
             ((DrugViewHolder) viewHolder).aic.setText(drug.getCode());
-            ((DrugViewHolder) viewHolder).industry.setText(drug.getIndustry());
+            ((DrugViewHolder) viewHolder).company.setText(drug.getCompany());
         } else if (getItemViewType(pos) == SearchType.ACTIVE_INGREDIENT.getId()) {
             ActiveIngredientLight activeIngredient = (ActiveIngredientLight) item;
             ((ActiveIngredientViewHolder) viewHolder).activeIngredient.setText(activeIngredient.getName());
         } else if (getItemViewType(pos) == SearchType.COMPANY.getId()) {
-            CompanyLight industry = (CompanyLight) item;
-            ((IndustryViewHolder) viewHolder).industry.setText(industry.getName());
+            CompanyLight company = (CompanyLight) item;
+            ((CompanyViewHolder) viewHolder).company.setText(company.getName());
         }
     }
 
@@ -206,8 +206,8 @@ public class ItemLightAdapter extends RecyclerView.Adapter<ItemLightAdapter.View
                                 DrugLight drug = (DrugLight) item;
                                 String name = drug.getName().toLowerCase();
                                 String aic = drug.getCode().toLowerCase();
-                                String industry = drug.getIndustry().toLowerCase();
-                                if (name.contains(constraint) || aic.contains(constraint) || industry.contains(constraint)) {
+                                String company = drug.getCompany().toLowerCase();
+                                if (name.contains(constraint) || aic.contains(constraint) || company.contains(constraint)) {
                                     filteredList.add(item);
                                 }
                             } else {

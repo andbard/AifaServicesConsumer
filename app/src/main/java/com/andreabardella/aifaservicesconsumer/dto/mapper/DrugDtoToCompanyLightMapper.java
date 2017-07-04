@@ -15,15 +15,15 @@ public class DrugDtoToCompanyLightMapper {
             output = new CompanyLight();
             StringBuilder builder = new StringBuilder();
             boolean isFirstOccurrence = true;
-            if (input.industryDescriptionList != null) {
-                for (String industry : input.industryDescriptionList) {
-                    builder.append(isFirstOccurrence ? industry : "; " + industry);
+            if (input.companyDescriptionList != null) {
+                for (String company : input.companyDescriptionList) {
+                    builder.append(isFirstOccurrence ? company : "; " + company);
                     isFirstOccurrence = false;
                 }
                 output.setName(builder.toString());
             }
-            if (input.industryCodeList != null) {
-                output.setCode(input.industryCodeList.get(0));
+            if (input.companyCodeList != null) {
+                output.setCode(input.companyCodeList.get(0));
             }
         }
         return output;

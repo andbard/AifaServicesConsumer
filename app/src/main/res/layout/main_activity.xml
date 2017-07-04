@@ -50,12 +50,12 @@
             android:gravity="center"
             android:background="@drawable/rect_round_corner"/>
         <com.andreabardella.aifaservicesconsumer.view.FontAwesomeTextView
-            android:id="@+id/main_activity_search_by_industry"
+            android:id="@+id/main_activity_search_by_company"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:layout_margin="8dp"
-            android:text="@string/fa_industry"
+            android:text="@string/fa_company"
             android:textSize="40sp"
             android:gravity="center"
             android:background="@drawable/rect_round_corner"/>
@@ -113,13 +113,13 @@
         <!--android:background="@drawable/rect_round_corner"/>-->
 
     <!--<com.andreabardella.aifaservicesconsumer.view.FontAwesomeTextView-->
-        <!--android:id="@+id/main_activity_search_by_industry"-->
+        <!--android:id="@+id/main_activity_search_by_company"-->
         <!--app:layout_row="1"-->
         <!--app:layout_column="1"-->
         <!--app:layout_columnWeight="1"-->
         <!--app:layout_rowWeight="1"-->
         <!--android:layout_margin="8dp"-->
-        <!--android:text="@string/fa_industry"-->
+        <!--android:text="@string/fa_company"-->
         <!--android:textSize="40sp"-->
         <!--android:gravity="center"-->
         <!--android:background="@drawable/rect_round_corner"/>-->

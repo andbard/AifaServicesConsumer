@@ -5,18 +5,18 @@ import android.support.annotation.NonNull;
 
 public class DrugLight extends ItemLight {
 
-    private String industry;
+    private String company;
 
     public DrugLight() {
         super();
     }
 
-    public String getIndustry() {
-        return industry;
+    public String getCompany() {
+        return company;
     }
 
-    public void setIndustry(String industry) {
-        this.industry = industry;
+    public void setCompany(String company) {
+        this.company = company;
     }
 
     @Override
@@ -25,7 +25,7 @@ public class DrugLight extends ItemLight {
         return o != null &&
                 (this.code != null ? this.code.equals(o.getCode()) : o.getCode() == null) &&
                 (this.name != null ? this.name.equalsIgnoreCase(o.getName()) : o.getName() == null) &&
-                (this.industry != null ? this.industry.equalsIgnoreCase(o.getIndustry()) : o.getIndustry() == null);
+                (this.company != null ? this.company.equalsIgnoreCase(o.getCompany()) : o.getCompany() == null);
     }
 
     @Override
@@ -33,7 +33,7 @@ public class DrugLight extends ItemLight {
         int hash = 0;
         hash += this.code != null ? this.code.hashCode() : 0;
         hash += this.name != null ? (this.name.toLowerCase()).hashCode() : 0;
-        hash += this.industry != null ? (this.industry.toLowerCase()).hashCode() : 0;
+        hash += this.company != null ? (this.company.toLowerCase()).hashCode() : 0;
         return hash;
     }
 
@@ -41,7 +41,7 @@ public class DrugLight extends ItemLight {
     public int compareTo(@NonNull ItemLight o) {
         if (this.code.compareTo(o.code) == 0) {
             if ((this.name.toLowerCase()).compareTo(o.name.toLowerCase()) == 0) {
-                return (this.industry.toLowerCase()).compareTo((((DrugLight) o).industry).toLowerCase());
+                return (this.company.toLowerCase()).compareTo((((DrugLight) o).company).toLowerCase());
             }
             return (this.name.toLowerCase()).compareTo(o.name.toLowerCase());
         }
@@ -55,13 +55,13 @@ public class DrugLight extends ItemLight {
     @Override
     public void readFromParcel(Parcel source) {
         super.readFromParcel(source);
-        this.setIndustry(source.readString());
+        this.setCompany(source.readString());
     }
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         super.writeToParcel(dest, flags);
-        dest.writeString(this.getIndustry());
+        dest.writeString(this.getCompany());
     }
 
     public static final Creator<DrugLight> CREATOR = new Creator<DrugLight>() {

@@ -57,8 +57,8 @@ public class DrugActivity extends BaseActivity {
     TextView drugNameTv;
     @BindView(R.id.drug_activity_aic_tv)
     TextView aicTv;
-    @BindView(R.id.drug_activity_industry_tv)
-    TextView industryTv;
+    @BindView(R.id.drug_activity_company_tv)
+    TextView companyTv;
     @BindView(R.id.drug_activity_active_ingredient_tv)
     TextView activeIngredientsTv;
 
@@ -181,11 +181,11 @@ public class DrugActivity extends BaseActivity {
                     intent.putExtra(MainActivity.SEARCH_TYPE, SearchType.DRUG);
                     intent.putExtra(MainActivity.SEARCH_BY, SearchType.COMPANY);
                     intent.putExtra(MainActivity.SEARCH_TEXT, company.getName());
-                    intent.putExtra(MainActivity.SEARCH_INDUSTRY_CODE, company.getCode());
+                    intent.putExtra(MainActivity.SEARCH_COMPANY_CODE, company.getCode());
                     builder.appendClickableSpanStartActivity(company.getName(), intent, this, false);
                 }
-                industryTv.setText(builder, TextView.BufferType.SPANNABLE);
-                industryTv.setMovementMethod(LinkMovementMethod.getInstance());
+                companyTv.setText(builder, TextView.BufferType.SPANNABLE);
+                companyTv.setMovementMethod(LinkMovementMethod.getInstance());
             }
 
             if (drugItem.getActiveIngredientSet() != null) {

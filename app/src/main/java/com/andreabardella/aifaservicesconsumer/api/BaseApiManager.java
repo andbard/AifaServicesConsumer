@@ -19,7 +19,7 @@ public abstract class BaseApiManager implements ApiServicesManager {
 
     protected CompositeDisposable compositeDisposable;
     protected Disposable getDrugsByDisposable;
-    protected Disposable getIndustriesByIndustryName;
+    protected Disposable getCompaniesByCompanyName;
     protected Disposable getActiveIngredientsByActiveIngredientName;
     protected Disposable getDrugItemByCode;
     protected Disposable getPatientInformationLeafletSize;
@@ -53,22 +53,22 @@ public abstract class BaseApiManager implements ApiServicesManager {
 
 
     @Override
-    public Observable<Set<CompanyLight>> getIndustriesByIndustryName(String industry) {
-        return getIndustriesByIndustryNameBeforeDisposableSetup(industry)
+    public Observable<Set<CompanyLight>> getCompaniesByCompanyName(String company) {
+        return getCompaniesByCompanyNameBeforeDisposableSetup(company)
                 .doOnSubscribe(new Consumer<Disposable>() {
             @Override
             public void accept(@NonNull Disposable disposable) throws Exception {
-                        getIndustriesByIndustryName = disposable;
-                        compositeDisposable.add(getIndustriesByIndustryName);
+                        getCompaniesByCompanyName = disposable;
+                        compositeDisposable.add(getCompaniesByCompanyName);
                     }
                 });
     }
 
-    protected abstract Observable<Set<CompanyLight>> getIndustriesByIndustryNameBeforeDisposableSetup(String industry);
+    protected abstract Observable<Set<CompanyLight>> getCompaniesByCompanyNameBeforeDisposableSetup(String company);
 
     @Override
-    public void cancelGetIndustriesByIndustryName() {
-        dispose(getIndustriesByIndustryName);
+    public void cancelGetCompaniesByCompanyName() {
+        dispose(getCompaniesByCompanyName);
     }
 
 

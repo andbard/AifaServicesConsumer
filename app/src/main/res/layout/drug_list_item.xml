@@ -29,10 +29,10 @@
             android:layout_margin="8dp"/>
     </LinearLayout>
     <TextView
-        android:id="@+id/drug_list_item_industry_tv"
+        android:id="@+id/drug_list_item_company_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="industryList: labxyz"
+        android:hint="companyList: labxyz"
         android:layout_margin="8dp"/>
 
 </LinearLayout>

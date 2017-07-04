@@ -53,8 +53,8 @@ public class SearchActivityPresenter extends BasePresenter {
                 observableDotCache = apiServicesManager.getActiveIngredientsByActiveIngredientName(text).cache();
                 break;
             case COMPANY:
-//                return industryLightObservable = apiServicesManager.getIndustriesByIndustryName(text);
-                observableDotCache = apiServicesManager.getIndustriesByIndustryName(text).cache();
+//                return companyLightObservable = apiServicesManager.getCompaniesByCompanyName(text);
+                observableDotCache = apiServicesManager.getCompaniesByCompanyName(text).cache();
                 break;
         }
         // check, by type, if an observableDotCache already is in map and return it

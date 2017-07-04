@@ -3,11 +3,11 @@ package com.andreabardella.aifaservicesconsumer.presenter;
 import com.andreabardella.aifaservicesconsumer.FooBar;
 import com.andreabardella.aifaservicesconsumer.base.BasePresenter;
 
-public class IndustriesFragmentPresenter extends BasePresenter {
+public class CompaniesFragmentPresenter extends BasePresenter {
 
     private FooBar fooBar;
 
-    public IndustriesFragmentPresenter(FooBar fooBar) {
+    public CompaniesFragmentPresenter(FooBar fooBar) {
         this.fooBar = fooBar;
     }
 
