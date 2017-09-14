@@ -12,7 +12,7 @@ import java.util.Set;
 import io.reactivex.Observable;
 import timber.log.Timber;
 
-public class SearchActivityPresenter extends BasePresenter {
+public class SearchActivityPresenter extends BasePresenter implements SearchPresenter {
 
     private ApiServicesManager apiServicesManager;
     private FooBar fooBar;
