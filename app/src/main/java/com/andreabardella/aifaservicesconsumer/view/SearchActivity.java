@@ -1,9 +1,11 @@
 package com.andreabardella.aifaservicesconsumer.view;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -153,6 +155,8 @@ public class SearchActivity extends BaseActivity implements SearchFragment.Searc
                     Toast.makeText(SearchActivity.this, "Use at least 3 characters", Toast.LENGTH_SHORT).show();
                 } else {
                     search(text, type, by, true);
+                    InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(searchBtn.getWindowToken(), 0);
                 }
             }
         });

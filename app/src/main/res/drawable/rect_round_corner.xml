@@ -3,9 +3,9 @@
 
     <stroke
         android:width="2dp"
-        android:color="@color/colorPrimaryDark"/>
+        android:color="@color/primary_dark"/>
     <solid
-        android:color="@color/colorPrimaryLight"/>
+        android:color="@color/primary_dark"/>
     <corners
         android:radius="4dp"/>
 

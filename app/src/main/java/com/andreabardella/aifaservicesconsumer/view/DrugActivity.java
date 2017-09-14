@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.content.FileProvider;
+import android.support.v7.widget.CardView;
 import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.Button;
@@ -42,12 +43,16 @@ import timber.log.Timber;
 
 public class DrugActivity extends BaseActivity {
 
-    @BindView(R.id.drug_activity_patient_information_leaflet_btn)
-    Button fiBtn;
+    @BindView(R.id.drug_activity_patient_information_leaflet_cv)
+    CardView fiCv;
+    @BindView(R.id.drug_activity_patient_information_leaflet_tv)
+    TextView fiBtn;
     @BindView(R.id.drug_activity_patient_information_leaflet_pb)
     ProgressBar fiPb;
-    @BindView(R.id.drug_activity_product_characteristics_summary_btn)
-    Button rcpBtn;
+    @BindView(R.id.drug_activity_product_characteristics_summary_cv)
+    CardView rcpCv;
+    @BindView(R.id.drug_activity_product_characteristics_summary_tv)
+    TextView rcpBtn;
     @BindView(R.id.drug_activity_product_characteristics_summary_pb)
     ProgressBar rcpPb;
 
@@ -151,7 +156,9 @@ public class DrugActivity extends BaseActivity {
     private void setDrugItemUI(DrugItem drugItem) {
         if (drugItem != null) {
             fiBtn.setEnabled(drugItem.getFiSize() > 0);
+            fiBtn.setText(drugItem.getFiSize() > 0 ? getString(R.string.download_brochure) : getString(R.string.brochure_not_available));
             rcpBtn.setEnabled(drugItem.getRcpSize() > 0);
+            rcpBtn.setText(drugItem.getRcpSize() > 0 ? getString(R.string.download_characteristics_summary) : getString(R.string.characteristics_summary_not_available));
             fiPb.setVisibility(View.GONE);
             rcpPb.setVisibility(View.GONE);
 
@@ -210,8 +217,10 @@ public class DrugActivity extends BaseActivity {
             }
         } else {
             fiBtn.setEnabled(false);
-            rcpBtn.setEnabled(false);
+            fiBtn.setText(getString(R.string.brochure_not_available));
             fiPb.setVisibility(View.GONE);
+            rcpBtn.setEnabled(false);
+            rcpBtn.setText(getString(R.string.characteristics_summary_not_available));
             rcpPb.setVisibility(View.GONE);
             drugItemPb.setVisibility(View.GONE);
         }
@@ -535,22 +544,22 @@ public class DrugActivity extends BaseActivity {
     }
 
     private void onGetFiSizeInProgress() {
-        fiBtn.setVisibility(View.GONE);
+        fiCv.setVisibility(View.GONE);
         fiPb.setVisibility(View.VISIBLE);
     }
 
     private void onGetRcpSizeInProgress() {
-        rcpBtn.setVisibility(View.GONE);
+        rcpCv.setVisibility(View.GONE);
         rcpPb.setVisibility(View.VISIBLE);
     }
 
     private void onGetFiInProgress() {
-        fiBtn.setVisibility(View.GONE);
+        fiCv.setVisibility(View.GONE);
         fiPb.setVisibility(View.VISIBLE);
     }
 
     private void onGetRcpInProgress() {
-        rcpBtn.setVisibility(View.GONE);
+        rcpCv.setVisibility(View.GONE);
         rcpPb.setVisibility(View.VISIBLE);
     }
 
@@ -562,20 +571,23 @@ public class DrugActivity extends BaseActivity {
 
     private void onGetFiSizeCompleted() {
         fiPb.setVisibility(View.GONE);
-        fiBtn.setVisibility(View.VISIBLE);
+        fiCv.setVisibility(View.VISIBLE);
         fiBtn.setEnabled(drugItem.getFiSize() > 0);
+        fiBtn.setText(drugItem.getFiSize() > 0 ? getString(R.string.download_brochure) : getString(R.string.brochure_not_available));
     }
 
     private void onGetRcpSizeCompleted() {
         rcpPb.setVisibility(View.GONE);
-        rcpBtn.setVisibility(View.VISIBLE);
+        rcpCv.setVisibility(View.VISIBLE);
         rcpBtn.setEnabled(drugItem.getRcpSize() > 0);
+        rcpBtn.setText(drugItem.getRcpSize() > 0 ? getString(R.string.download_characteristics_summary) : getString(R.string.characteristics_summary_not_available));
     }
 
     private void onGetFiCompleted() {
         fiPb.setVisibility(View.GONE);
-        fiBtn.setVisibility(View.VISIBLE);
+        fiCv.setVisibility(View.VISIBLE);
         fiBtn.setEnabled(drugItem.getFiSize() > 0);
+        fiBtn.setText(drugItem.getFiSize() > 0 ? getString(R.string.download_brochure) : getString(R.string.brochure_not_available));
         File file = new File(drugItem.getFiPath());
         Uri uri = FileProvider.getUriForFile(this, getString(R.string.file_provider_authority), file);
         showPdf(uri);
@@ -583,8 +595,9 @@ public class DrugActivity extends BaseActivity {
 
     private void onGetRcpCompleted() {
         rcpPb.setVisibility(View.GONE);
-        rcpBtn.setVisibility(View.VISIBLE);
+        rcpCv.setVisibility(View.VISIBLE);
         rcpBtn.setEnabled(drugItem.getRcpSize() > 0);
+        rcpBtn.setText(drugItem.getRcpSize() > 0 ? getString(R.string.download_characteristics_summary) : getString(R.string.characteristics_summary_not_available));
         File file = new File(drugItem.getRcpPath());
         Uri uri = FileProvider.getUriForFile(this, getString(R.string.file_provider_authority), file);
         showPdf(uri);

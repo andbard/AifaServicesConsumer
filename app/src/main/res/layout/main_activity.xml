@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/search_by"
+        android:layout_marginTop="16dp"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary_dark"
+        android:gravity="center"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -11,26 +21,42 @@
         android:layout_weight="1"
         android:orientation="horizontal"
         android:padding="8dp">
-        <com.andreabardella.aifaservicesconsumer.view.FontAwesomeTextView
-            android:id="@+id/main_activity_search_by_barcode"
+        <android.support.v7.widget.CardView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="8dp"
-            android:text="@string/fa_barcode"
-            android:textSize="40sp"
-            android:gravity="center"
-            android:background="@drawable/rect_round_corner"/>
-        <com.andreabardella.aifaservicesconsumer.view.FontAwesomeTextView
-            android:id="@+id/main_activity_search_by_drug"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="4dp"
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:thicknessRatio="1.9">
+            <com.andreabardella.aifaservicesconsumer.view.FontAwesomeTextView
+                android:id="@+id/main_activity_search_by_barcode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/fa_barcode"
+                android:textSize="32sp"
+                android:gravity="center"
+                android:background="@drawable/rect_round_corner"/>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="8dp"
-            android:text="@string/fa_drug"
-            android:textSize="40sp"
-            android:gravity="center"
-            android:background="@drawable/rect_round_corner"/>
+            android:layout_margin="16dp"
+            app:cardCornerRadius="4dp"
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:thicknessRatio="1.9">
+            <com.andreabardella.aifaservicesconsumer.view.FontAwesomeTextView
+                android:id="@+id/main_activity_search_by_drug"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/fa_drug"
+                android:textSize="32sp"
+                android:gravity="center"
+                android:background="@drawable/rect_round_corner"/>
+        </android.support.v7.widget.CardView>
     </LinearLayout>
 
     <LinearLayout
@@ -39,26 +65,42 @@
         android:layout_weight="1"
         android:orientation="horizontal"
         android:padding="8dp">
-        <com.andreabardella.aifaservicesconsumer.view.FontAwesomeTextView
-            android:id="@+id/main_activity_search_by_active_ingredient"
+        <android.support.v7.widget.CardView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="8dp"
-            android:text="@string/fa_active_ingredient"
-            android:textSize="40sp"
-            android:gravity="center"
-            android:background="@drawable/rect_round_corner"/>
-        <com.andreabardella.aifaservicesconsumer.view.FontAwesomeTextView
-            android:id="@+id/main_activity_search_by_company"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="4dp"
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:thicknessRatio="1.9">
+            <com.andreabardella.aifaservicesconsumer.view.FontAwesomeTextView
+                android:id="@+id/main_activity_search_by_active_ingredient"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/fa_active_ingredient"
+                android:textSize="32sp"
+                android:gravity="center"
+                android:background="@drawable/rect_round_corner"/>
+            </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="8dp"
-            android:text="@string/fa_company"
-            android:textSize="40sp"
-            android:gravity="center"
-            android:background="@drawable/rect_round_corner"/>
+            android:layout_margin="16dp"
+            app:cardCornerRadius="4dp"
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:thicknessRatio="1.9">
+            <com.andreabardella.aifaservicesconsumer.view.FontAwesomeTextView
+                android:id="@+id/main_activity_search_by_company"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/fa_company"
+                android:textSize="32sp"
+                android:gravity="center"
+                android:background="@drawable/rect_round_corner"/>
+        </android.support.v7.widget.CardView>
     </LinearLayout>
 
 </LinearLayout>

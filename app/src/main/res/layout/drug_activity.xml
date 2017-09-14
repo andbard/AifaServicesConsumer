@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -10,26 +11,56 @@
         android:orientation="horizontal"
         android:layout_margin="8dp"
         android:gravity="center_vertical|right">
-        <Button
-            android:id="@+id/drug_activity_patient_information_leaflet_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="FI"
-            android:textSize="32sp"/>
+        <android.support.v7.widget.CardView
+            android:id="@+id/drug_activity_patient_information_leaflet_cv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="4dp"
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:thicknessRatio="1.9">
+            <com.andreabardella.aifaservicesconsumer.view.FontAwesomeTextView
+                android:id="@+id/drug_activity_patient_information_leaflet_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rect_round_corner"
+                android:text="@string/download_brochure"
+                android:textSize="16sp"
+                android:gravity="center"/>
+        </android.support.v7.widget.CardView>
         <ProgressBar
             android:id="@+id/drug_activity_patient_information_leaflet_pb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        <Button
-            android:id="@+id/drug_activity_product_characteristics_summary_btn"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="RCP"
-            android:textSize="32sp"/>
+            android:layout_weight="1"
+            android:layout_gravity="center"/>
+        <android.support.v7.widget.CardView
+            android:id="@+id/drug_activity_product_characteristics_summary_cv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="4dp"
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:thicknessRatio="1.9">
+            <com.andreabardella.aifaservicesconsumer.view.FontAwesomeTextView
+                android:id="@+id/drug_activity_product_characteristics_summary_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rect_round_corner"
+                android:text="@string/download_characteristics_summary"
+                android:textSize="16sp"
+                android:gravity="center"/>
+        </android.support.v7.widget.CardView>
         <ProgressBar
             android:id="@+id/drug_activity_product_characteristics_summary_pb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"/>
     </LinearLayout>
 
     <android.support.v7.widget.CardView

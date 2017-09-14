@@ -19,5 +19,12 @@
     <string name="search_activity_label">Cerca</string>
     <string name="brochure">foglio illustrativo</string>
     <string name="characteristics_summary">riassunto delle caratteristiche del prodotto</string>
+    <string name="no_items">Nessun elemento</string>
+    <string name="filter">filtra:</string>
+    <string name="search_text">cerca testo</string>
+    <string name="download_brochure">&#xf019;\nscarica Foglio Illustrativo</string>
+    <string name="brochure_not_available">Foglio Illustrativo non disponibile</string>
+    <string name="download_characteristics_summary">&#xf019;\nscarica Riassunto Caratteristiche Prodotto</string>
+    <string name="characteristics_summary_not_available">Riassunto Caratteristiche Prodotto non disponibile</string>
 
 </resources>

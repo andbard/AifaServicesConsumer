@@ -1,28 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#009688</color>
-    <color name="colorPrimaryDark">#00796B</color>
-    <color name="colorPrimaryLight">#B2DFDB</color>
-    <color name="colorAccent"> #FFC107</color>
+    <color name="primary">#a5d6a7</color>
+    <color name="primary_dark">#75a478</color>
+    <color name="primary_light">#d7ffd9</color>
+    <color name="accent">#2196f3</color>
 
-    <color name="colorTextIcons">#FFFFFF</color>
+    <color name="text_icons">#ffffff</color>
 
-    <color name="colorPrimaryText">#212121</color>
-    <color name="colorSecondaryText">#757575</color>
-    <color name="colorDividerDark">#BDBDBD</color>
-
-    <!--<color name="colorBackgroundDark">#1565c0</color>-->
-    <!--<color name="colorBackgroundLight">#90caf9</color>-->
-
-    <!--<color name="colorPrimaryDarkText">#de000000</color>-->
-    <!--<color name="colorSecondaryDarkText">#8a000000</color>-->
-    <!--<color name="colorDisabledDarkText">#61000000</color>-->
-    <!--<color name="colorHintDarkText">@color/colorDisabledDarkText</color>-->
-    <!--<color name="colorDividerDark">#1e000000</color>-->
-
-    <!--<color name="colorPrimaryLightText">#ffffff</color>-->
-    <!--<color name="colorSecondaryLightText">#b3ffffff</color>-->
-    <!--<color name="colorDisabledLightText">#80ffffff</color>-->
-    <!--<color name="colorHintLightText">@color/colorDisabledLightText</color>-->
-    <!--<color name="colorDividerLight">#1effffff</color>-->
+    <color name="primary_text">#000000</color>
+    <color name="secondary_text">#757575</color>
+    <color name="divider_dark">#bdbdbd</color>
 </resources>

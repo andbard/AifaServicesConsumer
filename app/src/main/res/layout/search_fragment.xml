@@ -4,28 +4,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.v7.widget.SearchView
-        android:id="@+id/search_fragment_filter_sv"
+    <LinearLayout
+        android:id="@+id/search_fragment_filter_ll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:queryHint="filter..."
+        android:orientation="horizontal"
         android:layout_alignParentTop="true"
         android:layout_marginBottom="8dp"
-        android:background="@color/colorPrimary">
-    </android.support.v7.widget.SearchView>
-    <!--<EditText
-        android:id="@+id/search_fragment_filter_et"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:maxLines="1"
-        android:hint="filter..."/>-->
+        android:background="@color/primary">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:text="@string/filter"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <android.support.v7.widget.SearchView
+            android:id="@+id/search_fragment_filter_sv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </android.support.v7.widget.SearchView>
+    </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/search_fragment_results"
         android:scrollbars="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/search_fragment_filter_sv">
+        android:layout_below="@+id/search_fragment_filter_ll">
     </android.support.v7.widget.RecyclerView>
     <ProgressBar
         android:id="@+id/search_fragment_pb"
@@ -36,7 +43,7 @@
         android:id="@+id/search_fragment_empty_tv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="No items"
+        android:text="@string/no_items"
         android:textSize="24sp"
         android:gravity="center"
         android:visibility="gone"/>

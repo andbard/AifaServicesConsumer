@@ -84,6 +84,7 @@ dependencies {
     compile(group: support.group, name: support.names.gridLayout, version: support.version)
     compile(group: support.group, name: support.names.recyclerView, version: support.version)
     compile(group: support.group, name: support.names.cardView, version: support.version)
+    compile(group: support.group, name: support.names.design, version: support.version)
 
     /* Dagger */
     compile(group: dagger.group, name: dagger.names.dagger, version: dagger.version)
